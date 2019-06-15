@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
 
 const SidebarContainer = styled.div`
   width: 200px;
@@ -24,19 +25,19 @@ class Sidebar extends React.Component {
     return (
       <SidebarContainer>
         <ContainerA>
-          <a href="/profile">Профиль</a>
+          <NavLink to="/profile">Профиль</NavLink>
         </ContainerA>
         <ContainerA>
-          <a href="/dialogs">Сообщении</a>
+          <NavLink to="/dialogs">Сообщения</NavLink>
         </ContainerA>
         <ContainerA>
-          <A>News</A>
+          <NavLink to="/news">Новости</NavLink>
         </ContainerA>
         <ContainerA>
-          <A>Music</A>
+          <NavLink to="/music">Музыка</NavLink>
         </ContainerA>
         <ContainerA>
-          <A>Setting</A>
+          <NavLink to="/setting">Настройки</NavLink>
         </ContainerA>
       </SidebarContainer>
     )

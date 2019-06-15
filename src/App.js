@@ -3,9 +3,13 @@ import './App.css';
 import Header from './components/Header/index';
 import SideBar from './components/Sidebar/index';
 import Profile from './pages/Profile/index';
-import Dialogs from './pages/Dialogs/index'
-import { BrowserRouter } from 'react-router-dom';
-import { Route } from 'react-router';
+import Dialogs from './pages/Dialogs/index';
+import News from './pages/News/index';
+import Music from './pages/Music/index';
+import Setting from './pages/Setting/index';
+
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,8 +18,13 @@ function App() {
       <Header/>
       <div className="App-container">
         <SideBar />
-        <Route component={Dialogs} path='/dialogs' />
-        <Route component={Profile} path='/profile'/>
+        <Switch>
+          <Route component={Dialogs} path='/dialogs' />
+          <Route component={Profile} path='/profile' />
+          <Route component={News} path='/news' />
+          <Route component={Music} path='/music' />
+          <Route component={Setting} path='/setting' />
+        </Switch>
       </div>
     </div>
     </BrowserRouter>
