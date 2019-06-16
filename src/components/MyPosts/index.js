@@ -21,7 +21,8 @@ class MyPosts extends React.Component {
             <Textarea/>
             <Add>Add</Add>
           </AddPost>
-        <Post/>
+        <Post post='Хорошая погода' like='0'/>
+        <Post post='Плохая погода' like='23'/>
       </div>
     )
   }

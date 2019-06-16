@@ -10,20 +10,17 @@ const ImagePost = styled.img`
   height: 50px;
 `;
 
-class Post extends React.Component {
-  render() {
+const Post = props => {
     return (
       <div>
         <Posts>
           <ImagePost src={avatar}/>
-          Post 1
+         {props.post},
+          <br/>
+          {props.like}
         </Posts>
-        <Posts>
-          <ImagePost src={avatar}/>
-          Post 2</Posts>
       </div>
     )
-  }
-}
+};
 
 export default Post;
