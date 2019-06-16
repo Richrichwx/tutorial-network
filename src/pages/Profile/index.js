@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components'
 import image from '../../assets/image.jpeg';
-import avatar from '../../assets/avatar.jpeg';
-import MyPosts from '../../components/MyPosts/index'
+
+import MyPosts from '../../components/MyPosts/index';
+import ProfileInfo from '../../components/ProfileInfo/index';
 
 const ProfileContainer = styled.div`
  width: 800px;
@@ -16,27 +17,8 @@ const Img = styled.img`
 
 const ProfileContent = styled.div`
 `;
-
-const Avatar = styled.img`
-  width: 150px;
-  height: 150px;
-`;
-
-const ProfileInfo = styled.div`
-  width: 160px;
-  margin: 0 10px 0 10px;
-`;
-
-const Title = styled.h3`
-  margin: 0;
-`;
-
 const ProfileContentTop = styled.div`
-  display: flex;
-  margin: 10px;
-`;
-
-const TextInfo = styled.p`
+    display: flex;
 `;
 
 const ProfileContentBottom = styled.div`
@@ -49,13 +31,7 @@ class Profile extends React.Component {
         <Img src={image}/>
         <ProfileContent>
           <ProfileContentTop>
-            <Avatar src={avatar}></Avatar>
-            <ProfileInfo>
-              <Title>Анна Гусева</Title>
-              <TextInfo>Понятие «содержание высказывания» связано
-                с категорией информативности речи и присуще только тексту.
-              </TextInfo>
-            </ProfileInfo>
+            <ProfileInfo />
           </ProfileContentTop>
           <ProfileContentBottom>
             <MyPosts/>
