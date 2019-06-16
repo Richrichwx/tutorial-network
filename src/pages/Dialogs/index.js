@@ -17,6 +17,26 @@ const Item = styled.div`
 
 class Dialogs extends React.Component {
   render() {
+    const DialogsData = [
+      {
+        id: 1,
+        name: 'Дмитрий'
+      },
+      {
+        id: 2,
+        name: 'Мария'
+      }, {
+        id: 3,
+        name: 'Анна'
+      },
+      {
+        id: 4,
+        name: 'Александр'
+      }, {
+        id: 5,
+        name: 'Максим'
+      },
+    ];
     return (
       <DialogsContainer>
         <Item>
