@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import image from '../../assets/image.jpeg';
 import avatar from '../../assets/avatar.jpeg';
+import MyPosts from '../../components/MyPosts/index'
 
 const ProfileContainer = styled.div`
  width: 800px;
@@ -38,24 +39,7 @@ const ProfileContentTop = styled.div`
 const TextInfo = styled.p`
 `;
 
-const Posts = styled.div`
-`;
-
 const ProfileContentBottom = styled.div`
-`;
-
-const AddPost = styled.div`
-`;
-
-const Textarea = styled.textarea`
-`;
-
-const Add = styled.button`
-`;
-
-const ImagePost = styled.img`
-width: 50px;
-height: 50px;
 `;
 
 class Profile extends React.Component {
@@ -74,18 +58,7 @@ class Profile extends React.Component {
             </ProfileInfo>
           </ProfileContentTop>
           <ProfileContentBottom>
-            My post
-            <AddPost>
-              <Textarea/>
-              <Add>Add</Add>
-            </AddPost>
-            <Posts>
-              <ImagePost src={avatar}/>
-              Post 1
-            </Posts>
-            <Posts>
-              <ImagePost src={avatar}/>
-              Post 2</Posts>
+            <MyPosts/>
           </ProfileContentBottom>
         </ProfileContent>
       </ProfileContainer>
