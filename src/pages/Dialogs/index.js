@@ -16,7 +16,6 @@ const Item = styled.div`
 `;
 
 const Dialogs = (props) => {
-  console.log('h',props)
     return (
       <DialogsContainer>
         <div>
@@ -27,7 +26,6 @@ const Dialogs = (props) => {
         </div>
       </DialogsContainer>
     )
-
-}
+};
 
 export default Dialogs;

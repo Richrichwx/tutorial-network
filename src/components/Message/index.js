@@ -1,12 +1,11 @@
 import React from 'react';
 
 const Message = props => {
-  console.log('aa', props.message)
   return (
     <div>
-      {props.message.map((p,key) => {
+      {props.message.map((p,id) => {
         return  (
-          <div id={key}>
+          <div key={id}>
            {p.text} {p.like}
           </div>
         )
