@@ -10,17 +10,16 @@ const ImagePost = styled.img`
   height: 50px;
 `;
 
-const Post = post => {
-    return (
-      <div>
-        <Posts>
-          <ImagePost src={avatar}/>
-         {post.post},
-          <br/>
-          {post.like}
-        </Posts>
-      </div>
-    )
+const Post = props => {
+  return (
+    <div>
+      <Posts>
+        <ImagePost src={avatar}/>
+        {props.text},
+        {props.like}
+      </Posts>
+    </div>
+  )
 };
 
 export default Post;

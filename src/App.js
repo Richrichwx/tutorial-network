@@ -11,22 +11,23 @@ import Setting from './pages/Setting/index';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App(dialogsItem,messageItem,postsItem) {
+function App(posts,message,item) {
+  console.log(posts)
   return (
     <BrowserRouter>
-    <div className="App">
-      <Header/>
-      <div className="App-container">
-        <SideBar />
-        <Switch>
-          <Route path='/dialogs' render={ () => <Dialogs dialogs={dialogsItem} message={messageItem} posts={postsItem}/>} />
-          <Route component={Profile} path='/profile' />
-          <Route component={News} path='/news' />
-          <Route component={Music} path='/music' />
-          <Route component={Setting} path='/setting' />
-        </Switch>
+      <div className="App">
+        <Header/>
+        <div className="App-container">
+          <SideBar />
+          <Switch>
+            <Route render={ () => <Profile posts={posts.posts}/>} path='/profile' />
+            <Route render={ () => <Dialogs message={message}/>} path='/dialogs' />
+            <Route component={News} path='/news' />
+            <Route component={Music} path='/music' />
+            <Route component={Setting} path='/setting' />
+          </Switch>
+        </div>
       </div>
-    </div>
     </BrowserRouter>
   );
 }

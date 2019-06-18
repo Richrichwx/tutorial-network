@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import image from '../../assets/image.jpeg';
-
 import MyPosts from '../../components/MyPosts/index';
 import ProfileInfo from '../../components/ProfileInfo/index';
 
@@ -19,13 +18,13 @@ const ProfileContent = styled.div`
 `;
 const ProfileContentTop = styled.div`
     display: flex;
+       text-align: center;
 `;
 
 const ProfileContentBottom = styled.div`
 `;
 
-class Profile extends React.Component {
-  render(posts) {
+const Profile = (posts) => {
     return (
       <ProfileContainer>
         <Img src={image}/>
@@ -34,12 +33,11 @@ class Profile extends React.Component {
             <ProfileInfo />
           </ProfileContentTop>
           <ProfileContentBottom>
-            <MyPosts posts={posts}/>
+            <MyPosts posts={posts.posts}/>
           </ProfileContentBottom>
         </ProfileContent>
       </ProfileContainer>
     )
-  }
 }
 
 export default Profile;

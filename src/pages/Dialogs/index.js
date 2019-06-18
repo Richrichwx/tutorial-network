@@ -15,18 +15,12 @@ const Item = styled.div`
   margin-right: 20px;
 `;
 
-class Dialogs extends React.Component {
-  render(dialogs,message) {
+const Dialogs = (message,item) => {
+  console.log(message)
     return (
       <DialogsContainer>
         <div>
-          {dialogs.map((name,key) => {
-            return (
-              <Item key={key}>
-                <DialogItem name={name.name} id={name.id} />
-              </Item>
-            )
-          })}
+
         </div>
         <div>
           {message.map((text,id) => {
@@ -39,7 +33,7 @@ class Dialogs extends React.Component {
         </div>
       </DialogsContainer>
     )
-  }
+
 }
 
 export default Dialogs;

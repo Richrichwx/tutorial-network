@@ -11,27 +11,26 @@ const Textarea = styled.textarea`
 const Add = styled.button`
 `;
 
-class MyPosts extends React.Component {
-  render(posts) {
+
+const MyPosts = (posts) => {
     return (
       <div>
-          My post
-          <AddPost>
-            <Textarea/>
-            <Add>Add</Add>
-          </AddPost>
-        <>
-        { posts.map((el,id) => {
-          return (
-            <div key={id}>
-              <Post post={el.text} like={el.like}/>
-            </div>
-            )
-        })}
-        </>
+        My post
+        <AddPost>
+          <Textarea/>
+          <Add>Add</Add>
+        </AddPost>
+        <div>
+          {posts.posts.map((p,key) => {
+            return  (
+              <div id={key}>
+                <Post text={p.text} like={p.like}/>
+              </div>
+              )
+          })}
+        </div>
       </div>
     )
-  }
-}
+};
 
 export default MyPosts;
