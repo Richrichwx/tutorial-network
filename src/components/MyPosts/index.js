@@ -11,20 +11,8 @@ const Textarea = styled.textarea`
 const Add = styled.button`
 `;
 
- let postSData = [
-   {
-     text: 'Хорошая погода',
-     like: '0'
-   },
-   {
-     text: 'Плохая погода',
-     like: '23'
-   },
- ];
-
-
 class MyPosts extends React.Component {
-  render() {
+  render(posts) {
     return (
       <div>
           My post
@@ -32,13 +20,15 @@ class MyPosts extends React.Component {
             <Textarea/>
             <Add>Add</Add>
           </AddPost>
-        { postSData.map((el,id) => {
+        <>
+        { posts.map((el,id) => {
           return (
             <div key={id}>
               <Post post={el.text} like={el.like}/>
             </div>
             )
         })}
+        </>
       </div>
     )
   }

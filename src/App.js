@@ -11,7 +11,7 @@ import Setting from './pages/Setting/index';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App() {
+function App(dialogsItem,messageItem,postsItem) {
   return (
     <BrowserRouter>
     <div className="App">
@@ -19,7 +19,7 @@ function App() {
       <div className="App-container">
         <SideBar />
         <Switch>
-          <Route component={Dialogs} path='/dialogs' />
+          <Route path='/dialogs' render={ () => <Dialogs dialogs={dialogsItem} message={messageItem} posts={postsItem}/>} />
           <Route component={Profile} path='/profile' />
           <Route component={News} path='/news' />
           <Route component={Music} path='/music' />

@@ -10,14 +10,14 @@ const ImagePost = styled.img`
   height: 50px;
 `;
 
-const Post = props => {
+const Post = post => {
     return (
       <div>
         <Posts>
           <ImagePost src={avatar}/>
-         {props.post},
+         {post.post},
           <br/>
-          {props.like}
+          {post.like}
         </Posts>
       </div>
     )

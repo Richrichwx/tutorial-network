@@ -25,7 +25,7 @@ const ProfileContentBottom = styled.div`
 `;
 
 class Profile extends React.Component {
-  render() {
+  render(posts) {
     return (
       <ProfileContainer>
         <Img src={image}/>
@@ -34,7 +34,7 @@ class Profile extends React.Component {
             <ProfileInfo />
           </ProfileContentTop>
           <ProfileContentBottom>
-            <MyPosts/>
+            <MyPosts posts={posts}/>
           </ProfileContentBottom>
         </ProfileContent>
       </ProfileContainer>

@@ -16,42 +16,11 @@ const Item = styled.div`
 `;
 
 class Dialogs extends React.Component {
-  render() {
-    const dialogsData = [
-      {
-        id: 1,
-        name: 'Дмитрий'
-      },
-      {
-        id: 2,
-        name: 'Мария'
-      }, {
-        id: 3,
-        name: 'Анна'
-      },
-      {
-        id: 4,
-        name: 'Александр'
-      }, {
-        id: 5,
-        name: 'Максим'
-      },
-    ];
-
-    const messageData = [
-      {
-        id: 1,
-        text: 'Привет'
-      },
-      {
-        id: 2,
-        text: 'Как ты?'
-      }
-    ];
+  render(dialogs,message) {
     return (
       <DialogsContainer>
         <div>
-          {dialogsData.map((name,key) => {
+          {dialogs.map((name,key) => {
             return (
               <Item key={key}>
                 <DialogItem name={name.name} id={name.id} />
@@ -60,7 +29,7 @@ class Dialogs extends React.Component {
           })}
         </div>
         <div>
-          {messageData.map((text,id) => {
+          {message.map((text,id) => {
             return (
               <div key={id}>
                 <Message message={text.text} />
