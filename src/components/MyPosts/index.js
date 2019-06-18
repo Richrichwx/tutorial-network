@@ -12,7 +12,7 @@ const Add = styled.button`
 `;
 
 
-const MyPosts = (posts) => {
+const MyPosts = (props) => {
     return (
       <div>
         My post
@@ -21,7 +21,7 @@ const MyPosts = (posts) => {
           <Add>Add</Add>
         </AddPost>
         <div>
-          {posts.posts.map((p,key) => {
+          {props.posts.map((p,key) => {
             return  (
               <div id={key}>
                 <Post text={p.text} like={p.like}/>

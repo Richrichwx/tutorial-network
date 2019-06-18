@@ -11,8 +11,7 @@ import Setting from './pages/Setting/index';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-function App(posts,message,item) {
-  console.log(posts)
+function App(props) {
   return (
     <BrowserRouter>
       <div className="App">
@@ -20,8 +19,8 @@ function App(posts,message,item) {
         <div className="App-container">
           <SideBar />
           <Switch>
-            <Route render={ () => <Profile posts={posts.posts}/>} path='/profile' />
-            <Route render={ () => <Dialogs message={message}/>} path='/dialogs' />
+            <Route render={ () => <Profile posts={props.posts}/>} path='/profile' />
+            <Route render={ () => <Dialogs message={props.message} itemName={props.itemName} />} path='/dialogs' />
             <Route component={News} path='/news' />
             <Route component={Music} path='/music' />
             <Route component={Setting} path='/setting' />

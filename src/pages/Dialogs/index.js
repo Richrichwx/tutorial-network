@@ -15,21 +15,15 @@ const Item = styled.div`
   margin-right: 20px;
 `;
 
-const Dialogs = (message,item) => {
-  console.log(message)
+const Dialogs = (props) => {
+  console.log('h',props)
     return (
       <DialogsContainer>
         <div>
-
+          <DialogItem itemName={props.itemName}/>
         </div>
         <div>
-          {message.map((text,id) => {
-            return (
-              <div key={id}>
-                <Message message={text.text} />
-              </div>
-            )
-          })}
+          <Message message={props.message}/>
         </div>
       </DialogsContainer>
     )

@@ -24,7 +24,7 @@ const ProfileContentTop = styled.div`
 const ProfileContentBottom = styled.div`
 `;
 
-const Profile = (posts) => {
+const Profile = (props) => {
     return (
       <ProfileContainer>
         <Img src={image}/>
@@ -33,7 +33,7 @@ const Profile = (posts) => {
             <ProfileInfo />
           </ProfileContentTop>
           <ProfileContentBottom>
-            <MyPosts posts={posts.posts}/>
+            <MyPosts posts={props.posts}/>
           </ProfileContentBottom>
         </ProfileContent>
       </ProfileContainer>
