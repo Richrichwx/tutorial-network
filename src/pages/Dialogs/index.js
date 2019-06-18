@@ -17,7 +17,7 @@ const Item = styled.div`
 
 class Dialogs extends React.Component {
   render() {
-    const DialogsData = [
+    const dialogsData = [
       {
         id: 1,
         name: 'Дмитрий'
@@ -37,16 +37,37 @@ class Dialogs extends React.Component {
         name: 'Максим'
       },
     ];
+
+    const messageData = [
+      {
+        id: 1,
+        text: 'Привет'
+      },
+      {
+        id: 2,
+        text: 'Как ты?'
+      }
+    ];
     return (
       <DialogsContainer>
-        <Item>
-          <DialogItem name='Дмитрий' id='1' />
-          <DialogItem name='Мария' id='2' />
-        </Item>
-       <div>
-         <Message message='Привет' />
-         <Message message='Как ты?' />
-       </div>
+        <div>
+          {dialogsData.map((name,key) => {
+            return (
+              <Item key={key}>
+                <DialogItem name={name.name} id={name.id} />
+              </Item>
+            )
+          })}
+        </div>
+        <div>
+          {messageData.map((text,id) => {
+            return (
+              <div key={id}>
+                <Message message={text.text} />
+              </div>
+            )
+          })}
+        </div>
       </DialogsContainer>
     )
   }
