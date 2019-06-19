@@ -21,9 +21,9 @@ const MyPosts = (props) => {
           <Add>Add</Add>
         </AddPost>
         <div>
-          {props.posts.map((p,key) => {
+          {props.posts.map((p,id) => {
             return  (
-              <div id={key}>
+              <div key={id}>
                 <Post text={p.text} like={p.like}/>
               </div>
               )
