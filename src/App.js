@@ -20,10 +20,10 @@ function App(props) {
           <SideBar />
           <Switch>
             <Route render={ () => <Profile
-              posts={props.state.posts}/>} path='/profile' />
+              posts={props.state.profilePage.posts}/>} path='/profile' />
             <Route render={ () => <Dialogs
-              messages={props.state.messages}
-              dialogs={props.state.dialogs} />} path='/dialogs' />
+              messages={props.state.dialogsPage.messages}
+              dialogs={props.state.dialogsPage.dialogs} />} path='/dialogs' />
             <Route component={News} path='/news' />
             <Route component={Music} path='/music' />
             <Route component={Setting} path='/setting' />
