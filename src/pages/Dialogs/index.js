@@ -11,10 +11,6 @@ const DialogsContainer = styled.div`
   padding-top: 20px;
 `;
 
-const Item = styled.div`
-  margin-right: 20px;
-`;
-
 const Dialogs = (props) => {
     return (
       <DialogsContainer>

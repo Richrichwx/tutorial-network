@@ -12,7 +12,6 @@ import Setting from './pages/Setting/index';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App(props) {
-  console.log(props)
   return (
     <BrowserRouter>
       <div className="App">

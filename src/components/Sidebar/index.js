@@ -12,10 +12,6 @@ const SidebarContainer = styled.div`
   padding-bottom: 10px;
 `;
 
-const A = styled.a`
-  font-size: 18px;
-`;
-
 const ContainerA = styled.div`
   cursor: pointer;
 `;
