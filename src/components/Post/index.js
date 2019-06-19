@@ -11,6 +11,8 @@ const ImagePost = styled.img`
 `;
 
 const Post = props => {
+  debugger;
+  console.log('a',props)
   return (
     <div>
       <Posts>

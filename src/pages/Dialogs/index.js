@@ -19,10 +19,10 @@ const Dialogs = (props) => {
     return (
       <DialogsContainer>
         <div>
-          <DialogItem itemName={props.itemName}/>
+          <DialogItem dialogs={props.dialogs}/>
         </div>
         <div>
-          <Message message={props.message}/>
+          <Message messages={props.messages}/>
         </div>
       </DialogsContainer>
     )

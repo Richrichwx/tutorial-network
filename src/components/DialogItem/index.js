@@ -6,7 +6,7 @@ const DialogItem = props => {
   let path = '/dialogs/';
   return (
     <div>
-      {props.itemName.map((p,index) => {
+      {props.dialogs.map((p,index) => {
         return  (
           <div key={index}>
             <NavLink to={path + p.id}> {p.name}</NavLink>

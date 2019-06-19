@@ -38,6 +38,6 @@ const Profile = (props) => {
         </ProfileContent>
       </ProfileContainer>
     )
-}
+};
 
 export default Profile;

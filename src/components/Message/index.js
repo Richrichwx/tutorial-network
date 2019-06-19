@@ -3,7 +3,7 @@ import React from 'react';
 const Message = props => {
   return (
     <div>
-      {props.message.map((p,id) => {
+      {props.messages.map((p,id) => {
         return  (
           <div key={id}>
            {p.text} {p.like}
