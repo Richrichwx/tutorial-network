@@ -19,11 +19,8 @@ function App(props) {
         <div className="App-container">
           <SideBar />
           <Switch>
-            <Route render={ () => <Profile
-              posts={props.state.profilePage.posts}/>} path='/profile' />
-            <Route render={ () => <Dialogs
-              messages={props.state.dialogsPage.messages}
-              dialogs={props.state.dialogsPage.dialogs} />} path='/dialogs' />
+            <Route render={ () => <Profile state={props.state.profilePage}/>} path='/profile' />
+            <Route render={ () => <Dialogs state={props.state.dialogsPage}/>} path='/dialogs' />
             <Route component={News} path='/news' />
             <Route component={Music} path='/music' />
             <Route component={Setting} path='/setting' />

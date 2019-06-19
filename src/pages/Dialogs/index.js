@@ -15,10 +15,10 @@ const Dialogs = (props) => {
     return (
       <DialogsContainer>
         <div>
-          <DialogItem dialogs={props.dialogs}/>
+          <DialogItem dialogs={props.state.dialogs}/>
         </div>
         <div>
-          <Message messages={props.messages}/>
+          <Message messages={props.state.messages}/>
         </div>
       </DialogsContainer>
     )
