@@ -25,19 +25,19 @@ const ProfileContentBottom = styled.div`
 `;
 
 const Profile = (props) => {
-    return (
-      <ProfileContainer>
-        <Img src={image}/>
-        <ProfileContent>
-          <ProfileContentTop>
-            <ProfileInfo />
-          </ProfileContentTop>
-          <ProfileContentBottom>
-            <MyPosts posts={props.state.posts}/>
-          </ProfileContentBottom>
-        </ProfileContent>
-      </ProfileContainer>
-    )
+  return (
+    <ProfileContainer>
+      <Img src={ image }/>
+      <ProfileContent>
+        <ProfileContentTop>
+          <ProfileInfo/>
+        </ProfileContentTop>
+        <ProfileContentBottom>
+          <MyPosts posts={ props.state.posts }/>
+        </ProfileContentBottom>
+      </ProfileContent>
+    </ProfileContainer>
+  )
 };
 
 export default Profile;

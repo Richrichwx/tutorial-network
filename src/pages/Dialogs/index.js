@@ -12,16 +12,16 @@ const DialogsContainer = styled.div`
 `;
 
 const Dialogs = (props) => {
-    return (
-      <DialogsContainer>
-        <div>
-          <DialogItem dialogs={props.state.dialogs}/>
-        </div>
-        <div>
-          <Message messages={props.state.messages}/>
-        </div>
-      </DialogsContainer>
-    )
+  return (
+    <DialogsContainer>
+      <div>
+        <DialogItem dialogs={ props.state.dialogs }/>
+      </div>
+      <div>
+        <Message messages={ props.state.messages }/>
+      </div>
+    </DialogsContainer>
+  )
 };
 
 export default Dialogs;
