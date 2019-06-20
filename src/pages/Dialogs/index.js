@@ -12,6 +12,14 @@ const DialogsContainer = styled.div`
 `;
 
 const Dialogs = (props) => {
+
+  let textAdMessage  = React.createRef();
+
+  const addMessage = () => {
+    let textMessage = textAdMessage.current.value;
+    alert(textMessage)
+  };
+
   return (
     <DialogsContainer>
       <div>
@@ -19,7 +27,10 @@ const Dialogs = (props) => {
       </div>
       <div>
         <Message messages={ props.state.messages }/>
+        <textarea ref={textAdMessage}></textarea>
+        <button onClick={addMessage}>add message</button>
       </div>
+
     </DialogsContainer>
   )
 };

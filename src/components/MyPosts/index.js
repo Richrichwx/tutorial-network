@@ -13,12 +13,17 @@ const Add = styled.button`
 
 
 const MyPosts = (props) => {
+  let textInput = React.createRef();
+  const addPosts = () => {
+    let text = textInput.current.value;
+        alert(text)
+  };
     return (
       <div>
         My post
         <AddPost>
-          <Textarea/>
-          <Add>Add</Add>
+          <Textarea ref={textInput}/>
+          <Add onClick={addPosts}>Add</Add>
         </AddPost>
         <div>
           {props.posts.map((p,id) => {
