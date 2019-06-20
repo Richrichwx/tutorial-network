@@ -9,11 +9,10 @@ import Music from './pages/Music/index';
 import Setting from './pages/Setting/index';
 
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 function App(props) {
   return (
-    <BrowserRouter>
       <div className="App">
         <Header/>
         <div className="App-container">
@@ -27,7 +26,6 @@ function App(props) {
           </Switch>
         </div>
       </div>
-    </BrowserRouter>
   );
 }
 

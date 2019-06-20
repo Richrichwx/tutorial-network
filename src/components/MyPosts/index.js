@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
 
-const AddPost = styled.div`
+const AddPostS = styled.div`
 `;
 
 const Textarea = styled.textarea`
@@ -16,15 +16,20 @@ const MyPosts = (props) => {
   let textInput = React.createRef();
   const addPosts = () => {
     let text = textInput.current.value;
-        alert(text)
+    props.posts.push({
+      id: 3,
+      text: text,
+      like: 0
+    });
+    console.log(props.posts)
   };
     return (
       <div>
         My post
-        <AddPost>
+        <AddPostS>
           <Textarea ref={textInput}/>
           <Add onClick={addPosts}>Add</Add>
-        </AddPost>
+        </AddPostS>
         <div>
           {props.posts.map((p,id) => {
             return  (
