@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
-import { rerenderTree } from '../../render';
 
 const AddPostS = styled.div`
 `;
@@ -23,7 +22,6 @@ const MyPosts = (props) => {
       like: 0
     });
     console.log(props.posts)
-    rerenderTree();
     textInput.current.value= ''
   };
     return (
