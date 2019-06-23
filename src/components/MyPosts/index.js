@@ -14,17 +14,21 @@ const Add = styled.button`
 
 const MyPosts = (props) => {
   let textInput = React.createRef();
-  const addPosts = () => {
-    debugger
+  let addPosts = () => {
     let text = textInput.current.value;
-    props.addPost(text)
+    props.addPost(text);
     textInput.current.value=''
+  };
+
+  let onChangePost = ()  => {
+    let text = textInput.current.value;
+    props.updateNewPostText(text)
   };
     return (
       <div>
         My post
         <AddPostS>
-          <Textarea ref={textInput}/>
+          <Textarea onChange={onChangePost} ref={textInput} value={props.newPostText}/>
           <Add onClick={addPosts}>Add</Add>
         </AddPostS>
         <div>

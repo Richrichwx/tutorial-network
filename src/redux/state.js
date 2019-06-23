@@ -13,7 +13,8 @@ let state = {
         text: 'Плохая погода',
         like: '23'
       },
-    ]
+    ],
+    newPostText: 'anna'
   },
   dialogsPage: {
     dialogs: [
@@ -56,9 +57,14 @@ let state = {
     text: postMessage,
     like: 0
   };
-  state.profilePage.posts.push(newPost)
-   console.log( state.profilePage.posts)
+  state.profilePage.posts.push(newPost);
+   console.log( state.profilePage.posts);
    rerenderEntreTree(state);
+};
+
+export let updateNewPostText = newText => {
+  state.profilePage.newPostText = newText;
+  rerenderEntreTree(state);
 };
 
 export default state;
