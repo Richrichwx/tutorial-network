@@ -1,4 +1,6 @@
-import { rerenderEntreTree } from '../render';
+let rerenderEntreTree = ()  => {
+  console.log('state')
+};
 
 let state = {
   profilePage: {
@@ -51,7 +53,7 @@ let state = {
 };
 window.state =  state;
 
- export let addPost = () => {
+ export const addPost = () => {
   let newPost = {
     id: 5,
     text: state.profilePage.newPostText,
@@ -62,10 +64,14 @@ window.state =  state;
    rerenderEntreTree(state);
 };
 
-export let updateNewPostText = newText => {
+export const updateNewPostText = newText => {
   state.profilePage.newPostText = newText;
   rerenderEntreTree(state);
   console.log(newText)
+};
+
+export const subscribe = (observer) => {
+  rerenderEntreTree = observer;
 };
 
 export default state;
