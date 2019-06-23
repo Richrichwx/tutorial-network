@@ -17,12 +17,13 @@ const MyPosts = (props) => {
   let addPosts = () => {
     let text = textInput.current.value;
     props.addPost(text);
-    textInput.current.value=''
+    textInput.current.value='';
   };
 
   let onChangePost = ()  => {
     let text = textInput.current.value;
-    props.updateNewPostText(text)
+    props.updateNewPostText(text);
+    textInput.current.value='';
   };
     return (
       <div>
