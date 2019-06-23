@@ -33,7 +33,8 @@ const Profile = (props) => {
           <ProfileInfo/>
         </ProfileContentTop>
         <ProfileContentBottom>
-          <MyPosts posts={ props.state.posts }/>
+          <MyPosts posts={ props.state.posts }
+          addPost={props.addPost}/>
         </ProfileContentBottom>
       </ProfileContent>
     </ProfileContainer>

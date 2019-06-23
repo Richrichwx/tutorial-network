@@ -15,14 +15,9 @@ const Add = styled.button`
 const MyPosts = (props) => {
   let textInput = React.createRef();
   const addPosts = () => {
+    debugger
     let text = textInput.current.value;
-    props.posts.push({
-      id: 3,
-      text: text,
-      like: 0
-    });
-    console.log(props.posts)
-    textInput.current.value= ''
+    props.addPost(text)
   };
     return (
       <div>
