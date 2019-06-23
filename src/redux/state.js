@@ -49,15 +49,16 @@ let state = {
     ],
   }
 };
+window.state =  state;
 
- export let addPost = postMessage => {
+ export let addPost = () => {
   let newPost = {
     id: 5,
-    text: postMessage,
+    text: state.profilePage.newPostText,
     like: 0
   };
   state.profilePage.posts.push(newPost);
-   console.log( state.profilePage.posts);
+   state.profilePage.newPostText =  '';
    rerenderEntreTree(state);
 };
 
