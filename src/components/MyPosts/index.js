@@ -18,6 +18,7 @@ const MyPosts = (props) => {
     debugger
     let text = textInput.current.value;
     props.addPost(text)
+    textInput.current.value=''
   };
     return (
       <div>

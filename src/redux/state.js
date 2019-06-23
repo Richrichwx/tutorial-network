@@ -1,3 +1,5 @@
+import { rerenderEntreTree } from '../render';
+
 let state = {
   profilePage: {
     posts: [
@@ -51,11 +53,12 @@ let state = {
    debugger
   let newPost = {
     id: 5,
-    message: postMessage,
+    text: postMessage,
     like: 0
   };
   state.profilePage.posts.push(newPost)
    console.log( state.profilePage.posts)
+   rerenderEntreTree(state);
 };
 
 export default state;
