@@ -51,7 +51,6 @@ let state = {
 };
 
  export let addPost = postMessage => {
-   debugger
   let newPost = {
     id: 5,
     text: postMessage,
@@ -65,6 +64,7 @@ let state = {
 export let updateNewPostText = newText => {
   state.profilePage.newPostText = newText;
   rerenderEntreTree(state);
+  console.log(newText)
 };
 
 export default state;
