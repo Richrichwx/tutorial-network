@@ -14,7 +14,7 @@ let state = {
         like: '23'
       },
     ],
-    newPostText: 'anna'
+    newPostText: ''
   },
   dialogsPage: {
     dialogs: [
