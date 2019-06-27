@@ -16,12 +16,14 @@ const MyPosts = (props) => {
   let textInput = React.createRef();
   let addPosts = () => {
     let text = textInput.current.value;
-    props.addPost(text);
+    // props.addPost(text);
+    props.dispatch({ type: 'ADD_POST'});
   };
 
   let onChangePost = ()  => {
     let text = textInput.current.value;
-    props.updateNewPostText(text);
+    //
+    props.dispatch({type: 'UPDATE_NEW_POST_TEXT', newText: text});
   };
     return (
       <div>

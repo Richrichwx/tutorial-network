@@ -34,9 +34,8 @@ const Profile = (props) => {
         </ProfileContentTop>
         <ProfileContentBottom>
           <MyPosts posts={ props.state.posts }
-          addPost={props.addPost}
-          newPostText={ props.state.newPostText}
-          updateNewPostText={props.updateNewPostText}/>
+          dispatch={props.dispatch}
+          newPostText={ props.state.newPostText} />
         </ProfileContentBottom>
       </ProfileContent>
     </ProfileContainer>
