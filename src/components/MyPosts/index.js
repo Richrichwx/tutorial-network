@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
+import { addPostActionCreator, UpdateNewPostActionCreator } from '../../redux/state';
 
 const AddPostS = styled.div`
 `;
