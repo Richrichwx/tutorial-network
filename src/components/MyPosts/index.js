@@ -11,19 +11,26 @@ const Textarea = styled.textarea`
 const Add = styled.button`
 `;
 
+let addPostActionCreator = () => {
+  return { type: 'ADD_POST'}
+};
+
+let UpdateNewPostActionCreator = (text) => {
+  return { type: 'UPDATE_NEW_POST_TEXT', newText: text }
+};
 
 const MyPosts = (props) => {
   let textInput = React.createRef();
   let addPosts = () => {
     let text = textInput.current.value;
     // props.addPost(text);
-    props.dispatch({ type: 'ADD_POST'});
+    props.dispatch(addPostActionCreator());
   };
 
   let onChangePost = ()  => {
     let text = textInput.current.value;
     //
-    props.dispatch({type: 'UPDATE_NEW_POST_TEXT', newText: text});
+    props.dispatch(UpdateNewPostActionCreator(text));
   };
     return (
       <div>
