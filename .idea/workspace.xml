@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/components/MyPosts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MyPosts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="state.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/redux/state.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+            <state relative-caret-position="575">
+              <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
               <folding>
                 <element signature="e#88#757#0" />
                 <element signature="e#346#617#0" />
@@ -91,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MyPosts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -149,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
-        <option value="$PROJECT_DIR$/src/redux/state.js" />
         <option value="$PROJECT_DIR$/src/components/MyPosts/index.js" />
+        <option value="$PROJECT_DIR$/src/redux/state.js" />
       </list>
     </option>
   </component>
@@ -243,12 +244,12 @@
       <updated>1560593153246</updated>
       <workItem from="1560593154505" duration="5469000" />
       <workItem from="1560598906427" duration="916000" />
-      <workItem from="1560607310512" duration="50503000" />
+      <workItem from="1560607310512" duration="50625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56888000" />
+    <option name="totallyTimeSpent" value="57010000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -579,22 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/state.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
-          <folding>
-            <element signature="e#88#757#0" />
-            <element signature="e#346#617#0" />
-            <element signature="e#633#750#0" />
-            <element signature="e#812#842#0" />
-            <element signature="e#804#814#0" />
-            <element signature="e#884#1084#0" />
-            <element signature="e#1116#1213#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -607,10 +592,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MyPosts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="238">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
+          <folding>
+            <element signature="e#88#757#0" />
+            <element signature="e#346#617#0" />
+            <element signature="e#633#750#0" />
+            <element signature="e#812#842#0" />
+            <element signature="e#804#814#0" />
+            <element signature="e#884#1084#0" />
+            <element signature="e#1116#1213#0" />
           </folding>
         </state>
       </provider>
