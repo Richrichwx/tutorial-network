@@ -76,9 +76,8 @@ let store = {
   },
   _addMessage() {
     let newMessage = {
-      id: 5,
+      id: 3,
       text: this._state.dialogsPage.newMessageText,
-      like: 0
     };
     this._state.dialogsPage.messages.push(newMessage);
     this._state.dialogsPage.newMessageText = '';
@@ -98,8 +97,8 @@ let store = {
     } else if (action.type === 'ADD_MESSAGE') {
       this._addMessage();
     } else if (action.type === 'UPDATE_NEW_MESSAGE_TEXT') {
-
-    }this._updateNewMessageText(action.newMessage)
+      this._updateNewMessageText(action.newMessage)
+    }
   }
 };
 
