@@ -20,7 +20,7 @@ function App(props) {
           <Switch>
             <Route render={ () => <Profile state={props.state.profilePage}
             dispatch={props.dispatch} />} path='/profile' />
-            <Route render={ () => <Dialogs state={props.state.dialogsPage}/>} path='/dialogs' />
+            <Route render={ () => <Dialogs state={props.state.dialogsPage}  dispatch={props.dispatch}/>} path='/dialogs' />
             <Route component={News} path='/news' />
             <Route component={Music} path='/music' />
             <Route component={Setting} path='/setting' />

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import DialogItem from '../../components/DialogItem/index';
 import Message from '../../components/Message/index'
+import { addPostActionCreator, UpdateNewPostActionCreator } from '../../redux/state';
 
 const DialogsContainer = styled.div`
   width: 800px;
@@ -13,22 +14,15 @@ const DialogsContainer = styled.div`
 
 const Dialogs = (props) => {
 
-  let textAdMessage  = React.createRef();
-
-  const addMessage = () => {
-    let textMessage = textAdMessage.current.value;
-    alert(textMessage)
-  };
-
   return (
     <DialogsContainer>
       <div>
         <DialogItem dialogs={ props.state.dialogs }/>
       </div>
       <div>
-        <Message messages={ props.state.messages }/>
-        <textarea ref={textAdMessage}></textarea>
-        <button onClick={addMessage}>add message</button>
+        <Message  messages={ props.state.messages }
+                  dispatch={props.dispatch}
+                  newPostText={ props.state.newMessageText}/>
       </div>
 
     </DialogsContainer>

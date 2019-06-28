@@ -74,13 +74,32 @@ let store = {
     this._callSubscribe(this._state);
     console.log(newText)
   },
+  _addMessage() {
+    let newMessage = {
+      id: 5,
+      text: this._state.dialogsPage.newMessageText,
+      like: 0
+    };
+    this._state.dialogsPage.messages.push(newMessage);
+    this._state.dialogsPage.newMessageText = '';
+    this._callSubscribe(this._state);
+  },
 
+  _updateNewMessageText(newMessage) {
+    this._state.dialogsPage.newMessageText = newMessage;
+    this._callSubscribe(this._state);
+    console.log(newMessage)
+  },
   dispatch(action) {
     if (action.type === 'ADD_POST') {
       this._addPost();
     } else if (action.type === 'UPDATE_NEW_POST_TEXT') {
       this._updateNewPostText(action.newText)
-    }
+    } else if (action.type === 'ADD_MESSAGE') {
+      this._addMessage();
+    } else if (action.type === 'UPDATE_NEW_MESSAGE_TEXT') {
+
+    }this._updateNewMessageText(action.newMessage)
   }
 };
 
@@ -90,6 +109,14 @@ export const addPostActionCreator = () => {
 
 export const UpdateNewPostActionCreator = (text) => {
   return { type: 'UPDATE_NEW_POST_TEXT', newText: text }
+};
+
+export const addMessageActionCreator = () => {
+  return { type: 'ADD_MESSAGE'}
+};
+
+export const UpdateNewMessageActionCreator = (text) => {
+  return { type: 'UPDATE_NEW_MESSAGE_TEXT', newText: text }
 };
 
 
