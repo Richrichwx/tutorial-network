@@ -46,6 +46,7 @@ let store = {
           text: 'Как ты?'
         }
       ],
+      newMessageText: ''
     }
   },
   _callSubscribe() {

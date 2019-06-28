@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import DialogItem from '../../components/DialogItem/index';
 import Message from '../../components/Message/index'
-import { addPostActionCreator, UpdateNewPostActionCreator } from '../../redux/state';
 
 const DialogsContainer = styled.div`
   width: 800px;
@@ -22,7 +21,7 @@ const Dialogs = (props) => {
       <div>
         <Message  messages={ props.state.messages }
                   dispatch={props.dispatch}
-                  newPostText={ props.state.newMessageText}/>
+                  newMessageText={ props.state.newMessageText}/>
       </div>
 
     </DialogsContainer>

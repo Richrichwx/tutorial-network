@@ -2,7 +2,6 @@ import React from 'react';
 import { addMessageActionCreator, UpdateNewMessageActionCreator } from '../../redux/state';
 
 const Message = props => {
-  debugger
   let textAddMessage  = React.createRef();
 
   const addMessage = () => {
