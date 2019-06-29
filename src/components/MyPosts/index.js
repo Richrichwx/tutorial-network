@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
-import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/state';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/profileReducer';
 
 const AddPostS = styled.div`
 `;
