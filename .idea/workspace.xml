@@ -53,8 +53,8 @@
       <file leaf-file-name="profileReducer.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/redux/profileReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="345">
+              <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -62,8 +62,8 @@
       <file leaf-file-name="dialogsReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/dialogsReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <state relative-caret-position="184">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -92,8 +92,8 @@
       <file leaf-file-name="state.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/state.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="809">
-              <caret line="102" column="3" lean-forward="true" selection-start-line="93" selection-start-column="2" selection-end-line="102" selection-end-column="3" />
+            <state relative-caret-position="349">
+              <caret line="90" column="37" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="90" selection-end-column="37" />
               <folding>
                 <element signature="e#856#884#0" />
                 <element signature="e#908#949#0" />
@@ -172,8 +172,8 @@
         <option value="$PROJECT_DIR$/src/components/MyPosts/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
         <option value="$PROJECT_DIR$/src/redux/sidebarReducer.js" />
-        <option value="$PROJECT_DIR$/src/redux/dialogsReducer.js" />
         <option value="$PROJECT_DIR$/src/redux/profileReducer.js" />
+        <option value="$PROJECT_DIR$/src/redux/dialogsReducer.js" />
       </list>
     </option>
   </component>
@@ -273,12 +273,12 @@
       <workItem from="1560593154505" duration="5469000" />
       <workItem from="1560598906427" duration="916000" />
       <workItem from="1560607310512" duration="50682000" />
-      <workItem from="1561750843525" duration="4194000" />
+      <workItem from="1561750843525" duration="4332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61261000" />
+    <option name="totallyTimeSpent" value="61399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -608,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/state.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="102" column="3" lean-forward="true" selection-start-line="93" selection-start-column="2" selection-end-line="102" selection-end-column="3" />
+        <state relative-caret-position="349">
+          <caret line="90" column="37" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="90" selection-end-column="37" />
           <folding>
             <element signature="e#856#884#0" />
             <element signature="e#908#949#0" />
@@ -619,15 +619,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/dialogsReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="184">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/profileReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="345">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
     </entry>
