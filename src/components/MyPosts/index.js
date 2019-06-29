@@ -14,14 +14,13 @@ const Add = styled.button`
 
 
 const MyPosts = (props) => {
-  let textInput = React.createRef();
   let addPosts = () => {
     // props.addPost(text);
     props.dispatch(addPostActionCreator());
   };
 
-  let onChangePost = ()  => {
-    let text = textInput.current.value;
+  let onChangePost = (e)  => {
+    let text = e.target.value;
     //
     props.dispatch(updateNewPostActionCreator(text));
   };
@@ -29,7 +28,7 @@ const MyPosts = (props) => {
       <div>
         My post
         <AddPostS>
-          <Textarea onChange={onChangePost} ref={textInput} value={props.newPostText}/>
+          <Textarea onChange={onChangePost} value={props.newPostText}/>
           <Add onClick={addPosts}>Add</Add>
         </AddPostS>
         <div>
