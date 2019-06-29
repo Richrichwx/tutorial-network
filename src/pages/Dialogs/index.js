@@ -12,7 +12,6 @@ const DialogsContainer = styled.div`
 `;
 
 const Dialogs = (props) => {
-
   return (
     <DialogsContainer>
       <div>

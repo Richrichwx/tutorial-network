@@ -1,4 +1,5 @@
 let store = {
+
   _state: {
     profilePage: {
       posts: [
@@ -83,6 +84,7 @@ let store = {
     this._state.dialogsPage.messages.push(newMessage);
     this._state.dialogsPage.newMessageText = '';
     this._callSubscribe(this._state);
+    console.log( this._state.dialogsPage.newMessageText)
   },
 
   _updateNewMessageText(newMessage) {
@@ -107,7 +109,7 @@ export const addPostActionCreator = () => {
   return { type: 'ADD_POST'}
 };
 
-export const UpdateNewPostActionCreator = (text) => {
+export const updateNewPostActionCreator = (text) => {
   return { type: 'UPDATE_NEW_POST_TEXT', newText: text }
 };
 
@@ -115,8 +117,8 @@ export const addMessageActionCreator = () => {
   return { type: 'ADD_MESSAGE'}
 };
 
-export const UpdateNewMessageActionCreator = (text) => {
-  return { type: 'UPDATE_NEW_MESSAGE_TEXT', newText: text }
+export const updateNewMessageActionCreator = (text) => {
+  return { type: 'UPDATE_NEW_MESSAGE_TEXT', newMessage: text }
 };
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { addMessageActionCreator, UpdateNewMessageActionCreator } from '../../redux/state';
+import { addMessageActionCreator, updateNewMessageActionCreator } from '../../redux/state';
 
 const Message = props => {
   let textAddMessage  = React.createRef();
@@ -10,7 +10,7 @@ const Message = props => {
 
   const onChangeMessage = () => {
     let text = textAddMessage.current.value;
-    props.dispatch(UpdateNewMessageActionCreator(text));
+    props.dispatch(updateNewMessageActionCreator(text));
   };
   return (
     <div>

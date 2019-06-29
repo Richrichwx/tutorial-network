@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
-import { addPostActionCreator, UpdateNewPostActionCreator } from '../../redux/state';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/state';
 
 const AddPostS = styled.div`
 `;
@@ -16,7 +16,6 @@ const Add = styled.button`
 const MyPosts = (props) => {
   let textInput = React.createRef();
   let addPosts = () => {
-    let text = textInput.current.value;
     // props.addPost(text);
     props.dispatch(addPostActionCreator());
   };
@@ -24,7 +23,7 @@ const MyPosts = (props) => {
   let onChangePost = ()  => {
     let text = textInput.current.value;
     //
-    props.dispatch(UpdateNewPostActionCreator(text));
+    props.dispatch(updateNewPostActionCreator(text));
   };
     return (
       <div>
