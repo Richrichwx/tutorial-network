@@ -1,3 +1,7 @@
+import profileReducer from './profileReducer';
+import dialogsReducer from './dialogsReducer';
+import sidebarReducer from './sidebarReducer';
+
 let store = {
 
   _state: {
@@ -91,6 +95,11 @@ let store = {
     this._callSubscribe(this._state);
   },
   dispatch(action) {
+
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    sidebarReducer();
+
     if (action.type === 'ADD_POST') {
       this._addPost();
     } else if (action.type === 'UPDATE_NEW_POST_TEXT') {
