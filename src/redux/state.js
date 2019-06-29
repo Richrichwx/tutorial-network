@@ -84,13 +84,11 @@ let store = {
     this._state.dialogsPage.messages.push(newMessage);
     this._state.dialogsPage.newMessageText = '';
     this._callSubscribe(this._state);
-    console.log( this._state.dialogsPage.newMessageText)
   },
 
   _updateNewMessageText(newMessage) {
     this._state.dialogsPage.newMessageText = newMessage;
     this._callSubscribe(this._state);
-    console.log(newMessage)
   },
   dispatch(action) {
     if (action.type === 'ADD_POST') {
