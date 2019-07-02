@@ -20,6 +20,7 @@ const ProfileContentBottom = styled.div`
 `;
 
 const Profile = (props) => {
+  debugger
   return (
     <ProfileContainer>
       <ProfileContent>

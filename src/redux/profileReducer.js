@@ -1,4 +1,21 @@
-const profileReducer = (state,action) => {
+const initialState = {
+  posts: [
+    {
+      id: 1,
+      text: 'Хорошая погода',
+      like: '0'
+    },
+    {
+      id: 2,
+      text: 'Плохая погода',
+      like: '23'
+    },
+  ],
+  newPostText: ''
+};
+
+const profileReducer = (state = initialState, action) => {
+  debugger
   switch (action.type) {
     case 'ADD_POST':
       let newPost = {
