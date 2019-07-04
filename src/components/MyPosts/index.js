@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Post from '../Post/index';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/profileReducer';
 import { addPost } from '../../store/profile/profile.action';
+
 import { connect } from 'react-redux';
+import { saveTaskToLocal } from '../../store/profile/utilits';
 
 const AddPostS = styled.div`
 `;
@@ -19,12 +21,17 @@ class MyPosts extends React.Component {
   state = {
     value: ''
   }
+   rando = (min, max) => {
+    let rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+  }
   addPosts = (e) => {
+    this.props.addPost(this.state.value);
+    saveTaskToLocal({
+      title: this.state.value,
 
-    console.log(this.props.post)
-
-     let a =this.state.value
-    this.props.addPost(a)
+    })
   };
   a = (e) => {
     this.setState({
@@ -40,7 +47,9 @@ class MyPosts extends React.Component {
           <Add onClick={this.addPosts}>Add</Add>
         </AddPostS>
         <div>
-          {this.props.post.post}
+          {this.props.post.post.map((item,id) => {
+
+          })}
         </div>
       </div>
     )

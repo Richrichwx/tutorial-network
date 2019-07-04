@@ -1,7 +1,6 @@
 
 const initialState = {
   post:[]
-
 };
 
 export default function (state = initialState, action) {
