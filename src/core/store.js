@@ -1,15 +1,10 @@
-import { createStore } from 'redux';
-import { combineReducers } from 'redux';
-import profileReducer from '../redux/profileReducer';
-import dialogsReducer from '../redux/dialogsReducer';
+import rootReducer from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
+const composeEnhancers = composeWithDevTools({ trace: true, traceLimit: 25 });
 
-let reducers = combineReducers({
-  profileReducer,
-  dialogsReducer
-});
-
-
-let store = createStore(reducers);
-
-export default store;
+export default createStore(rootReducer, composeEnhancers(
+  applyMiddleware(thunk)
+))
