@@ -14,7 +14,6 @@ const Add = styled.button`
 
 
 const MyPosts = (props) => {
-  debugger
   let addPosts = () => {
     // props.addPost(text);
     props.dispatch(addPostActionCreator());
