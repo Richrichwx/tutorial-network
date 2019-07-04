@@ -15,6 +15,8 @@ const Textarea = styled.textarea`
 
 const Add = styled.button`
 `;
+const A = styled.div`
+`;
 
 
 class MyPosts extends React.Component {
@@ -43,8 +45,13 @@ class MyPosts extends React.Component {
         </AddPostS>
         <div>
           { this.props.post.post.map((item,index) => {
+            return(
+            <A key={index}>
+              {item}
+            </A>
+          )
+          })}
 
-          }) }
         </div>
       </div>
     )
