@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { addPost } from '../../store/profile/profile.action';
-
-import { connect } from 'react-redux';
-
+import Post from '../Post/index';
+import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/profileReducer';
 
 const AddPostS = styled.div`
 `;
@@ -13,59 +11,37 @@ const Textarea = styled.textarea`
 
 const Add = styled.button`
 `;
-const A = styled.div`
-`;
 
 
-class MyPosts extends React.Component {
-  state = {
-    value: ''
+const MyPosts = (props) => {
+  let addPosts = () => {
+    // props.addPost(text);
+    props.dispatch(addPostActionCreator());
   };
 
-  onChangePost = (e) => {
-    this.setState({
-      value: e.target.value
-    });
+  let onChangePost = (e)  => {
+    let text = e.target.value;
+    //
+    props.dispatch(updateNewPostActionCreator(text));
   };
-
-  addPosts = (e) => {
-    this.props.addPost(this.state.value);
-    console.log(this.props.post);
-    this.setState({
-      value: e.target.value
-    });
-  };
-
-
-  render() {
-    return (
+  return (
+    <div>
+      My post
+      <AddPostS>
+        <Textarea onChange={onChangePost} value={props.newPostText}/>
+        <Add onClick={addPosts}>Add</Add>
+      </AddPostS>
       <div>
-        My post
-        <AddPostS>
-          <Textarea value={ this.state.value } onChange={ this.onChangePost }/>
-          <Add onClick={ this.addPosts }>Add</Add>
-        </AddPostS>
-        <div>
-          { this.props.post.post.map((item,index) => {
-            return(
-            <A key={index}>
-              {item}
-            </A>
+        {props.posts.map((p,id) => {
+          return  (
+            <div key={id}>
+              <Post text={p.text} like={p.like}/>
+            </div>
           )
-          })}
-
-        </div>
+        })}
       </div>
-    )
-  }
-
-};
-const mapStateToProps = state => ({
-  post: state.profile
-});
-
-const mapDispatchToProps = {
-  addPost
+    </div>
+  )
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyPosts)
+export default MyPosts;

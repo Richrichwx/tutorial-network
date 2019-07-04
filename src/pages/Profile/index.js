@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import MyPosts from '../../components/MyPosts/index';
 import ProfileInfo from '../../components/ProfileInfo/index';
 
-
 const ProfileContainer = styled.div`
  width: 800px;
  background: #c2a7a1;
 `;
+
 
 const ProfileContent = styled.div`
 `;
@@ -19,23 +19,22 @@ const ProfileContentTop = styled.div`
 const ProfileContentBottom = styled.div`
 `;
 
-class Profile extends React.Component {
-  render() {
-    return (
-      <ProfileContainer>
-        <ProfileContent>
-          <ProfileContentTop>
-            <ProfileInfo/>
-          </ProfileContentTop>
-          <ProfileContentBottom>
-            <MyPosts/>
-          </ProfileContentBottom>
-        </ProfileContent>
-      </ProfileContainer>
-    )
-  }
-}
+const Profile = (props) => {
 
+  return (
+    <ProfileContainer>
+      <ProfileContent>
+        <ProfileContentTop>
+          <ProfileInfo/>
+        </ProfileContentTop>
+        <ProfileContentBottom>
+          <MyPosts posts={ props.state.posts }
+                   dispatch={props.dispatch}
+                   newPostText={ props.state.newPostText} />
+        </ProfileContentBottom>
+      </ProfileContent>
+    </ProfileContainer>
+  )
+};
 
-
-export default Profile
+export default Profile;
