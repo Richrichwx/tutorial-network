@@ -4,12 +4,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import store from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store1 from './core/store'
 
 let rerenderEntreTree = (state) => {
-  debugger;
   ReactDOM.render(
     <BrowserRouter>
+      <Provider store={store1}>
       <App state={ state } dispatch={ store.dispatch.bind(store) } />
+      </Provider>,
     </BrowserRouter>, document.getElementById('root'));
 };
 rerenderEntreTree(store.getState());

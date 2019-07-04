@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Post from '../Post/index';
 import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/profileReducer';
+import { addPost } from '../../store/profile/profile.action';
+import { connect } from 'react-redux';
 
 const AddPostS = styled.div`
 `;
@@ -13,35 +15,44 @@ const Add = styled.button`
 `;
 
 
-const MyPosts = (props) => {
-  let addPosts = () => {
-    // props.addPost(text);
-    props.dispatch(addPostActionCreator());
-  };
+class MyPosts extends React.Component {
+  state = {
+    value: ''
+  }
+  addPosts = (e) => {
 
-  let onChangePost = (e)  => {
-    let text = e.target.value;
-    //
-    props.dispatch(updateNewPostActionCreator(text));
+    console.log(this.props.post)
+
+     let a =this.state.value
+    this.props.addPost(a)
   };
+  a = (e) => {
+    this.setState({
+      value: e.target.value
+    });
+  };
+  render() {
     return (
       <div>
         My post
         <AddPostS>
-          <Textarea onChange={onChangePost} value={props.newPostText}/>
-          <Add onClick={addPosts}>Add</Add>
+          <Textarea  value={this.state.value} onChange={this.a}/>
+          <Add onClick={this.addPosts}>Add</Add>
         </AddPostS>
         <div>
-          {props.posts.map((p,id) => {
-            return  (
-              <div key={id}>
-                <Post text={p.text} like={p.like}/>
-              </div>
-              )
-          })}
+          {this.props.post.post}
         </div>
       </div>
     )
+  }
+
+};
+const mapStateToProps = state => ({
+    post: state.profile
+});
+
+const mapDispatchToProps = {
+  addPost
 };
 
-export default MyPosts;
+export default connect(mapStateToProps, mapDispatchToProps)(MyPosts)
