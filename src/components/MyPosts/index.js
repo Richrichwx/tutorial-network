@@ -5,7 +5,7 @@ import { addPostActionCreator, updateNewPostActionCreator } from '../../redux/pr
 import { addPost } from '../../store/profile/profile.action';
 
 import { connect } from 'react-redux';
-import { saveTaskToLocal } from '../../store/profile/utilits';
+
 
 const AddPostS = styled.div`
 `;
@@ -20,36 +20,31 @@ const Add = styled.button`
 class MyPosts extends React.Component {
   state = {
     value: ''
-  }
-   rando = (min, max) => {
-    let rand = min - 0.5 + Math.random() * (max - min + 1)
-    rand = Math.round(rand);
-    return rand;
-  }
+  };
+
   addPosts = (e) => {
     this.props.addPost(this.state.value);
-    saveTaskToLocal({
-      title: this.state.value,
+    console.log(this.props.post)
 
-    })
   };
   a = (e) => {
     this.setState({
       value: e.target.value
     });
   };
+
   render() {
     return (
       <div>
         My post
         <AddPostS>
-          <Textarea  value={this.state.value} onChange={this.a}/>
-          <Add onClick={this.addPosts}>Add</Add>
+          <Textarea value={ this.state.value } onChange={ this.a }/>
+          <Add onClick={ this.addPosts }>Add</Add>
         </AddPostS>
         <div>
-          {this.props.post.post.map((item,id) => {
+          { this.props.post.post.map((item,index) => {
 
-          })}
+          }) }
         </div>
       </div>
     )
@@ -57,7 +52,7 @@ class MyPosts extends React.Component {
 
 };
 const mapStateToProps = state => ({
-    post: state.profile
+  post: state.profile
 });
 
 const mapDispatchToProps = {
