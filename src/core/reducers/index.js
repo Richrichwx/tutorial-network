@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
-import profile from '../../store/profile'
+import profileReducer from '../../redux/profileReducer';
+import dialogsReducer from '../../redux/dialogsReducer';
 export default combineReducers({
-  profile
+  profileReducer,
+  dialogsReducer
 })
