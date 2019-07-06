@@ -20,6 +20,6 @@ const Post = props => {
       </Posts>
     </div>
   )
-}
+};
 
-export default Post
+export default Post;
