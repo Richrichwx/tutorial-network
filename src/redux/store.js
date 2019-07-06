@@ -55,7 +55,6 @@ let store = {
     }
   },
   _callSubscribe() {
-    console.log('state')
   },
 
   getState() {
