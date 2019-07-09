@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import MyPosts from '../../components/MyPosts/index';
 import ProfileInfo from '../../components/ProfileInfo/index';
+import { connect } from 'react-redux';
 
 const ProfileContainer = styled.div`
  width: 800px;
@@ -37,4 +38,12 @@ const Profile = (props) => {
   )
 };
 
-export default Profile;
+const mapStateToProps = (state) => ({
+  profilePage: state.profilePage
+});
+
+const mapDispatchToProps = () => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile)
