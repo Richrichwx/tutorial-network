@@ -13,20 +13,20 @@ import { Route, Switch } from 'react-router-dom';
 
 function App(props) {
   return (
-      <div className="App">
-        <Header/>
-        <div className="App-container">
-          <SideBar />
-          <Switch>
-            <Route render={ () => <Profile state={props.state.profilePage}
-            dispatch={props.dispatch} />} path='/profile' />
-            <Route render={ () => <Dialogs state={props.state.dialogsPage}  dispatch={props.dispatch}/>} path='/dialogs' />
-            <Route component={News} path='/news' />
-            <Route component={Music} path='/music' />
-            <Route component={Setting} path='/setting' />
-          </Switch>
-        </div>
+    <div className="App">
+      <Header/>
+      <div className="App-container">
+        <SideBar />
+        <Switch>
+          <Route render={ () => <Profile state={props.state.profilePage}
+                                         dispatch={props.dispatch} />} path='/profile' />
+          <Route render={ () => <Dialogs state={props.state.dialogsPage}  dispatch={props.dispatch}/>} path='/dialogs' />
+          <Route component={News} path='/news' />
+          <Route component={Music} path='/music' />
+          <Route component={Setting} path='/setting' />
+        </Switch>
       </div>
+    </div>
   );
 }
 

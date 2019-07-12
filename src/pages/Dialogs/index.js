@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import DialogItem from '../../components/DialogItem/index';
-import Message from '../../components/Message/index';
-import { connect } from 'react-redux';
+import Message from '../../components/Message/index'
 
 const DialogsContainer = styled.div`
   width: 800px;
@@ -23,16 +22,9 @@ const Dialogs = (props) => {
                   dispatch={props.dispatch}
                   newMessageText={ props.state.newMessageText}/>
       </div>
+
     </DialogsContainer>
   )
 };
 
-const mapStateToProps = (state) => ({
-  dialogsPage: state.dialogsPage
-});
-
-const mapDispatchToProps = () => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Dialogs)
+export default Dialogs;

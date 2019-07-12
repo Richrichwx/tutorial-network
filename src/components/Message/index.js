@@ -13,17 +13,17 @@ const Message = props => {
   };
   return (
     <div>
-    <textarea onChange={onChangeMessage} value={props.newMessageText} />
-    <button onClick={addMessage}>add message</button>
-    <div>
-      {props.messages.map((p,id) => {
-        return  (
-          <div key={id}>
-           {p.text} {p.like}
-          </div>
-        )
-      })}
-    </div>
+      <textarea onChange={onChangeMessage} value={props.newMessageText} />
+      <button onClick={addMessage}>add message</button>
+      <div>
+        {props.messages.map((p,id) => {
+          return  (
+            <div key={id}>
+              {p.text} {p.like}
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 };

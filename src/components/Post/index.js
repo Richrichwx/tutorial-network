@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import avatar from '../../assets/avatar.jpeg';
+import avatar from '../../assets/image.jpeg';
 
 const Posts = styled.div`
 `;
