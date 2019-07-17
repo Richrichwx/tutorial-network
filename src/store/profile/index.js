@@ -1,17 +1,15 @@
 const initialState = {
-  message: []
+  post:[]
 };
-
-export default function (state = initialState,action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case 'ADD_POST': {
       return {
         ...state,
-        message: [...state.message, action.message],
+        post: [...state.post, action.post],
       };
     }
     default:
       return state;
-    }
-
-};
+  }
+}

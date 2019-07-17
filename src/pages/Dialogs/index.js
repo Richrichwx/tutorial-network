@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { addMessage, updateNewMessage } from '../../store/messages/messages.action';
+import { addMessage, } from '../../store/messages/messages.action';
 
 
 const DialogsContainer = styled.div`
@@ -11,35 +11,47 @@ const DialogsContainer = styled.div`
   justify-content: center;
   padding-top: 20px;
 `;
+const A = styled.div`
+`;
 
-const Dialogs = () => {
-  const addMessage = () => {
-
+class Dialogs extends React.Component {
+  state = {
+    value: ''
+  };
+  onChangeMessage = (e) => {
+    this.setState({
+      value: e.target.value
+    });
   };
 
-  const onChangeMessage = (e) => {
-
+  addMessages = (e) => {
+    this.props.addMessage(this.state.value);
+    this.setState({
+      value: e.target.value
+    });
   };
-  return (
-    <DialogsContainer>
-      <div>
-      </div>
-      <div>
-        <textarea onChange={onChangeMessage} />
-        <button onClick={addMessage}>add message</button>
-      </div>
+  render() {
+    return (
+      <DialogsContainer>
+        <div>
 
-    </DialogsContainer>
-  )
-};
+        </div>
+        <div>
+          <textarea onChange={ this.onChangeMessage } value={this.state.value}/>
+          <button onClick={ this.addMessages }>add message</button>
+        </div>
+
+      </DialogsContainer>
+    )
+  }
+}
 
 const mapStateToProps = state => ({
-  messages: state.messages
+  message: state.messages
 });
 
 const mapDispatchToProps = {
   addMessage,
-  updateNewMessage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dialogs)

@@ -1,8 +1,5 @@
-export const addMessage = () => ({
+export const addMessage = (message) => ({
   type: 'ADD_MESSAGE',
+  message
 });
 
-export const updateNewMessage = (text) => ({
-  type: 'UPDATE_NEW_MESSAGE',
-  text
-});
