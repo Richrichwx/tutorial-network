@@ -2,13 +2,7 @@ import Profile from '../pages/Profile'
 import Dialogs from '../pages/Dialogs'
 
 const Routes = [
-  {
-    path: '/',
-    to: '/',
-    title: 'Main',
-    description: 'Profile',
-    component: Profile,
-  },
+
   {
     path: '/profile',
     to: '/',
