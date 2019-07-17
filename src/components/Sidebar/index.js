@@ -17,14 +17,22 @@ const ContainerA = styled.div`
 `;
 
 class Sidebar extends React.Component {
+  navigateTo = (e, path) => {
+    e.preventDefault();
+    window.navigate.push(`/${path}`)
+  };
   render() {
     return (
       <SidebarContainer>
         <ContainerA>
-          <NavLink to="/profile">Профиль</NavLink>
+          <a href="/#" onClick={(e) => this.navigateTo(e, 'profile')}>
+            Профиль
+          </a>
         </ContainerA>
         <ContainerA>
-          <NavLink to="/dialogs">Сообщения</NavLink>
+          <a href="/#" onClick={(e) => this.navigateTo(e, 'dialogs')}>
+            Диалоги
+          </a>
         </ContainerA>
         <ContainerA>
           <NavLink to="/news">Новости</NavLink>
