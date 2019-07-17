@@ -11,16 +11,15 @@ import Setting from './pages/Setting/index';
 
 import { Route, Switch } from 'react-router-dom';
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <Header/>
       <div className="App-container">
         <SideBar />
         <Switch>
-          <Route render={ () => <Profile state={props.state.profilePage}
-                                         dispatch={props.dispatch} />} path='/profile' />
-          <Route render={ () => <Dialogs state={props.state.dialogsPage}  dispatch={props.dispatch}/>} path='/dialogs' />
+          <Route render={ () => <Profile/>}path='/profile' />
+          <Route render={ () => <Dialogs />}path='/dialogs' />
           <Route component={News} path='/news' />
           <Route component={Music} path='/music' />
           <Route component={Setting} path='/setting' />

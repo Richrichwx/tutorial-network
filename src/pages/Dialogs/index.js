@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import DialogItem from '../../components/DialogItem/index';
-import Message from '../../components/Message/index'
+import { connect } from 'react-redux';
+import { addMessage, updateNewMessage } from '../../store/messages/messages.action';
+
 
 const DialogsContainer = styled.div`
   width: 800px;
@@ -11,20 +12,34 @@ const DialogsContainer = styled.div`
   padding-top: 20px;
 `;
 
-const Dialogs = (props) => {
+const Dialogs = () => {
+  const addMessage = () => {
+
+  };
+
+  const onChangeMessage = (e) => {
+
+  };
   return (
     <DialogsContainer>
       <div>
-        <DialogItem dialogs={ props.state.dialogs }/>
       </div>
       <div>
-        <Message  messages={ props.state.messages }
-                  dispatch={props.dispatch}
-                  newMessageText={ props.state.newMessageText}/>
+        <textarea onChange={onChangeMessage} />
+        <button onClick={addMessage}>add message</button>
       </div>
 
     </DialogsContainer>
   )
 };
 
-export default Dialogs;
+const mapStateToProps = state => ({
+  messages: state.messages
+});
+
+const mapDispatchToProps = {
+  addMessage,
+  updateNewMessage
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dialogs)

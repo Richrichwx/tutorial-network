@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import image from '../../assets/image.jpeg';
 import MyPosts from '../../components/MyPosts/index';
 import ProfileInfo from '../../components/ProfileInfo/index';
 
@@ -24,7 +23,7 @@ const ProfileContentTop = styled.div`
 const ProfileContentBottom = styled.div`
 `;
 
-const Profile = (props) => {
+const Profile = () => {
   return (
     <ProfileContainer>
       <ProfileContent>
@@ -32,9 +31,7 @@ const Profile = (props) => {
           <ProfileInfo/>
         </ProfileContentTop>
         <ProfileContentBottom>
-          <MyPosts posts={ props.state.posts }
-                   dispatch={props.dispatch}
-                   newPostText={ props.state.newPostText} />
+          <MyPosts  />
         </ProfileContentBottom>
       </ProfileContent>
     </ProfileContainer>
