@@ -4,7 +4,7 @@ const initialState = {
 
 export default function (state = initialState,action) {
   switch (action.type) {
-    case 'ADD_POST': {
+    case 'ADD_MESSAGE': {
       return {
         ...state,
         message: [...state.message, action.message],

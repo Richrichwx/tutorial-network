@@ -34,13 +34,18 @@ class Dialogs extends React.Component {
     return (
       <DialogsContainer>
         <div>
-
-        </div>
-        <div>
           <textarea onChange={ this.onChangeMessage } value={this.state.value}/>
           <button onClick={ this.addMessages }>add message</button>
         </div>
-
+        <div>
+          { this.props.message.message.map((item,index) => {
+            return(
+              <A key={index}>
+                {item}
+              </A>
+            )
+          })}
+        </div>
       </DialogsContainer>
     )
   }
