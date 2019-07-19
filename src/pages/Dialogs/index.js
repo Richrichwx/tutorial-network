@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { addMessage, getUser, } from '../../store/messages/messages.action';
+import { addMessage } from '../../store/messages/messages.action';
+import { getUser } from '../../store/nameDialogs/dialogs.action';
 
 
 const DialogsContainer = styled.div`
@@ -77,7 +78,7 @@ class Dialogs extends React.Component {
 
 const mapStateToProps = state => ({
   message: state.messages,
-  nameUser: state.messages
+  nameUser: state.nameDialogs
 });
 
 const mapDispatchToProps = {
