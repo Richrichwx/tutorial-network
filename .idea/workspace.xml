@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dialogs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dialogs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/nameDialogs/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/messages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/messages/messages.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/messages.action.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,7 +32,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="-170">
               <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -47,10 +42,19 @@
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/src/store/nameDialogs/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+            <state relative-caret-position="621">
+              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -131,11 +135,12 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/ProfileInfo/index.js" />
         <option value="$PROJECT_DIR$/src/store/messages/messages.action.js" />
-        <option value="$PROJECT_DIR$/src/store/messages/index.js" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Dialogs/index.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
+        <option value="$PROJECT_DIR$/src/store/messages/index.js" />
+        <option value="$PROJECT_DIR$/src/store/nameDialogs/index.js" />
       </list>
     </option>
   </component>
@@ -249,6 +254,13 @@
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="messages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tutorial-network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial-network" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="nameDialogs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -307,12 +319,12 @@
       <workItem from="1562092200083" duration="17982000" />
       <workItem from="1562688587490" duration="2618000" />
       <workItem from="1562967758497" duration="773000" />
-      <workItem from="1563206754478" duration="14897000" />
+      <workItem from="1563206754478" duration="15100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104601000" />
+    <option name="totallyTimeSpent" value="104804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="961" extended-state="0" />
@@ -371,7 +383,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Profile/MyPosts/index.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Profile/MyPosts/Post/index.js" />
     <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -627,27 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -668,6 +662,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/nameDialogs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>
