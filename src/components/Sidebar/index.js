@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 const SidebarContainer = styled.div`
   width: 200px;
-  height: 500px;
+  height: 460px;
   background: #f7e3fd;
   margin: 0 auto;
   flex-direction: column;
   display: flex;
-  padding-bottom: 10px;
+  padding: 20px 0;
 `;
 
 const ContainerA = styled.div`
@@ -25,12 +25,12 @@ class Sidebar extends React.Component {
     return (
       <SidebarContainer>
         <ContainerA>
-          <a href="/#" onClick={(e) => this.navigateTo(e, 'profile')}>
+          <a href="/profile" onClick={(e) => this.navigateTo(e, 'profile')}>
             Профиль
           </a>
         </ContainerA>
         <ContainerA>
-          <a href="/#" onClick={(e) => this.navigateTo(e, 'dialogs')}>
+          <a href="/dialogs" onClick={(e) => this.navigateTo(e, 'dialogs')}>
             Диалоги
           </a>
         </ContainerA>

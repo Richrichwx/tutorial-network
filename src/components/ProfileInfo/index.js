@@ -10,6 +10,10 @@ const Avatar = styled.img`
 const ProfileContainer = styled.div`
  display: flex;
   margin: 0 auto;
+    width: 300px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
 `;
 
 const ProfileInfoCont = styled.div`

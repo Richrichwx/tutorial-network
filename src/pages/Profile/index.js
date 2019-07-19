@@ -4,9 +4,6 @@ import ProfileInfo from '../../components/ProfileInfo/index';
 import { connect } from 'react-redux';
 import { addPost } from '../../store/profile/profile.action';
 
-
-
-
 const AddPostS = styled.div`
 `;
 
@@ -15,25 +12,24 @@ const Textarea = styled.textarea`
 
 const Add = styled.button`
 `;
+
 const A = styled.div`
 `;
 
 
 const ProfileContainer = styled.div`
- width: 800px;
- background: #c2a7a1;
-`;
-
-const Img = styled.img`
- width: 800px;
- height: 120px;
+  width: 800px;
+  background: #c2a7a1;
+  height: 460px;
+  padding: 20px 0;
 `;
 
 const ProfileContent = styled.div`
 `;
+
 const ProfileContentTop = styled.div`
-    display: flex;
-       text-align: center;
+  display: flex;
+  text-align: center;
 `;
 
 const ProfileContentBottom = styled.div`
@@ -79,7 +75,6 @@ class Profile extends React.Component {
                     </A>
                   )
                 })}
-
               </div>
             </div>
           </ProfileContentBottom>

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dialogs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dialogs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/messages/messages.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/messages/messages.action.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="61" column="67" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="67" />
+            <state relative-caret-position="364">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -28,29 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages.action.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/messages/messages.action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="306">
+              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,17 +49,20 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="414">
+              <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Sidebar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="437">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="22" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,7 +103,6 @@
         <option value="$PROJECT_DIR$/src/pages/Profile/MyPosts/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Profile/Post/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Profile/ProfileInfo/index.js" />
-        <option value="$PROJECT_DIR$/src/components/ProfileInfo/index.js" />
         <option value="$PROJECT_DIR$/src/redux/func.js" />
         <option value="$PROJECT_DIR$/src/redux/addPost.js" />
         <option value="$PROJECT_DIR$/src/render.js" />
@@ -132,15 +125,16 @@
         <option value="$PROJECT_DIR$/src/store/profille/index.js" />
         <option value="$PROJECT_DIR$/src/store/profille/profile.action.js" />
         <option value="$PROJECT_DIR$/src/core/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/store/messages/messages.action.js" />
-        <option value="$PROJECT_DIR$/src/store/messages/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Dialogs/index.js" />
         <option value="$PROJECT_DIR$/src/components/MyPosts/index.js" />
         <option value="$PROJECT_DIR$/src/containers/RouterWrapper.js" />
         <option value="$PROJECT_DIR$/src/containers/HOC/MainRouteHOC.js" />
-        <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/ProfileInfo/index.js" />
+        <option value="$PROJECT_DIR$/src/store/messages/messages.action.js" />
+        <option value="$PROJECT_DIR$/src/store/messages/index.js" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/Dialogs/index.js" />
         <option value="$PROJECT_DIR$/src/routes/index.js" />
       </list>
     </option>
@@ -313,12 +307,12 @@
       <workItem from="1562092200083" duration="17982000" />
       <workItem from="1562688587490" duration="2618000" />
       <workItem from="1562967758497" duration="773000" />
-      <workItem from="1563206754478" duration="10623000" />
+      <workItem from="1563206754478" duration="14897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100327000" />
+    <option name="totallyTimeSpent" value="104601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="961" extended-state="0" />
@@ -332,7 +326,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" sideWeight="0.50051284" side_tool="true" weight="0.24954791" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32900944" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32900944" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
@@ -377,13 +371,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Profile/MyPosts/index.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Profile/MyPosts/Post/index.js" />
     <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
@@ -538,16 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -582,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/messages/messages.action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -603,34 +573,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="61" column="67" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MyPosts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" selection-start-line="2" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -654,16 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Sidebar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -671,10 +607,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/messages/users.action.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/messages/messages.action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Dialogs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Sidebar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="414">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
         </state>
       </provider>
     </entry>

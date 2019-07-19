@@ -3,3 +3,7 @@ export const addMessage = (message) => ({
   message
 });
 
+export const getUser = () => ({
+  type: 'GET_USER',
+});
+

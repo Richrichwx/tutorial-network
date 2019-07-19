@@ -17,6 +17,13 @@ const Routes = [
     description: '',
     component: Dialogs,
   },
+  {
+    path: '/dialogs/:id',
+    to: '/dialogs',
+    title: 'dialogs',
+    description: '',
+    component: Dialogs,
+  },
   ];
 
 export default Routes
