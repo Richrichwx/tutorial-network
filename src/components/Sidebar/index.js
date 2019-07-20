@@ -35,6 +35,11 @@ class Sidebar extends React.Component {
           </a>
         </ContainerA>
         <ContainerA>
+          <a href="/users" onClick={(e) => this.navigateTo(e, 'users')}>
+            Пользователи
+          </a>
+        </ContainerA>
+        <ContainerA>
           <NavLink to="/news">Новости</NavLink>
         </ContainerA>
         <ContainerA>

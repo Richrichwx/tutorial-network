@@ -1,5 +1,6 @@
-import Profile from '../pages/Profile'
-import Dialogs from '../pages/Dialogs'
+import Profile from '../pages/Profile';
+import Dialogs from '../pages/Dialogs';
+import Users from '../pages/Users'
 
 const Routes = [
 
@@ -23,6 +24,13 @@ const Routes = [
     title: 'dialogs',
     description: '',
     component: Dialogs,
+  },
+  {
+    path: '/users',
+    to: '/users',
+    title: 'users',
+    description: 'users',
+    component: Users,
   },
   ];
 
