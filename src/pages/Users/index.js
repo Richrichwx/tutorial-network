@@ -8,12 +8,10 @@ const UsersContainer = styled.div`
   padding: 20px 0;
 `;
 
-class Users extends React.Component {
-  render() {
-    return (
-      <UsersContainer>Пользователи</UsersContainer>
-    )
-  }
-}
+const Users = () => {
+  return (
+    <UsersContainer>Пользователи</UsersContainer>
+  )
+};
 
 export default Users;
