@@ -2,6 +2,7 @@ const initialState = {
   users:[
     {
       id: 1,
+      image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
       fullName: 'Anna G.',
       status: 'I am cute ',
       location: {
@@ -12,6 +13,7 @@ const initialState = {
     },
     {
       id: 2,
+      image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
       fullName: 'Alex G.',
       status: 'I am smile',
       location: {
@@ -22,6 +24,7 @@ const initialState = {
     },
     {
       id: 3,
+      image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
       fullName: 'June G.',
       status: 'I am cute ',
       location: {
@@ -32,6 +35,7 @@ const initialState = {
     },
     {
       id: 4,
+      image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
       fullName: 'Marya G.',
       status: 'I am cute ',
       location: {

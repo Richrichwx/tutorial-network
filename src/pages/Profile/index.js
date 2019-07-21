@@ -20,7 +20,7 @@ const A = styled.div`
 const ProfileContainer = styled.div`
   width: 800px;
   background: #c2a7a1;
-  height: 460px;
+  height: auto;
   padding: 20px 0;
 `;
 

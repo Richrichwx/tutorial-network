@@ -10,6 +10,11 @@ const UsersContainer = styled.div`
   padding: 20px 0;
 `;
 
+const Img = styled.img`
+  width: 100px;
+  height: 50px;
+`;
+
 class Users extends React.Component {
   render() {
     const {users} = this.props;
@@ -18,7 +23,24 @@ class Users extends React.Component {
         {users.users.map((user,id) => {
           return (
             <div key={id}>
-              {user.fullName}
+              <span>
+                <div>
+                  <Img src={user.image} alt=""/>
+                </div>
+                 <div>
+                 <button>Follow</button>
+                </div>
+              </span>
+              <span>
+                <span>
+                  <div>{user.fullName}</div>
+                   <div>{user.status}</div>
+                </span>
+                 <span>
+                  <div>{user.location.city}</div>
+                   <div>{user.location.country}</div>
+                </span>
+              </span>
             </div>
           )
         })}
