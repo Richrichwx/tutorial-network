@@ -16,7 +16,57 @@ const Img = styled.img`
 
 class Users extends React.Component {
   render() {
-    const {users} = this.props;
+    const {users,setUsers} = this.props;
+
+    if(users.users.length === 0)  {
+      setUsers([
+        {
+          id: 1,
+          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
+          fullName: 'Anna G.',
+          status: 'I am cute ',
+          location: {
+            city: 'Moscow',
+            country: 'Russia'
+          },
+          followed: false
+        },
+        {
+          id: 2,
+          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
+          fullName: 'Alex G.',
+          status: 'I am smile',
+          location: {
+            city: 'Minsk',
+            country: 'Belarus'
+          },
+          followed: true
+        },
+        {
+          id: 3,
+          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
+          fullName: 'June G.',
+          status: 'I am cute ',
+          location: {
+            city: 'NY',
+            country: 'Unated  State'
+          },
+          followed: true
+        },
+        {
+          id: 4,
+          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
+          fullName: 'Marya G.',
+          status: 'I am cute ',
+          location: {
+            city: 'Kiev',
+            country: 'Ukraine'
+          },
+          followed: false
+        }
+      ]);
+    }
+
     return (
       <UsersContainer>
         {users.users.map((user,id) => {
@@ -28,10 +78,10 @@ class Users extends React.Component {
                 </div>
                  <div>
                    {user.followed?
-                     <button onClick={() => {
+                     <button onClick={ () => {
                        this.props.unFollow(user.id)}
                      }>UnFollow</button>
-                     : <button  onClick={() => {
+                     : <button  onClick={ () => {
                        this.props.follow(user.id)}
                      } >Follow</button>}
                 </div>
