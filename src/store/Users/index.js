@@ -44,6 +44,21 @@ const initialState = {
 };
 export default function (state = initialState, action) {
   switch (action.type) {
+    case 'FOLLOW' : {
+      return {
+        ...state,
+        users: state.users.map(user => {
+          if(user.id ===  action.userId) {
+            return {...user, followed: true}
+          }
+          else {
+            return {...user, followed: false}
+          }
+          return user
+        })
+      }
+    }
+
     default:
       return state;
   }
