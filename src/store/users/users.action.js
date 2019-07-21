@@ -1,4 +1,4 @@
-export const Follow = (userId) => ({
+export const follow = (userId) => ({
   type: 'FOLLOW',
   userId
 });
