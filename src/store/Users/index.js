@@ -51,14 +51,23 @@ export default function (state = initialState, action) {
           if(user.id ===  action.userId) {
             return {...user, followed: true}
           }
-          else {
-            return {...user, followed: false}
-          }
+
           return user
         })
       }
     }
+    case 'UNFOLLOW' : {
+      return {
+        ...state,
+        users: state.users.map(user => {
+          if(user.id ===  action.userId) {
+            return {...user, followed: false}
+          }
 
+          return user
+        })
+      }
+    }
     default:
       return state;
   }
