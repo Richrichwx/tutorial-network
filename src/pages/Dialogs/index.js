@@ -47,9 +47,10 @@ class Dialogs extends React.Component {
   };
 
   render() {
+    const {message,nameUser} = this.props;
     return (
       <DialogsContainer>
-        { this.props.nameUser.nameUser.map((name,index) => {
+        {nameUser.nameUser.map((name,index) => {
           return(
             <div key={index}>
               <a href="/#" onClick={(e) => this.navigateTo(e, `dialogs/${name.id}`)}>
@@ -63,7 +64,7 @@ class Dialogs extends React.Component {
           <button onClick={ this.addMessages }>add message</button>
         </AddMessageItem>
         <Items>
-          { this.props.message.message.map((item,index) => {
+          {message.message.map((item,index) => {
             return(
               <ItemMessage key={index}>
                 {item}

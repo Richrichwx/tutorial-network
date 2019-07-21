@@ -54,6 +54,7 @@ class Profile extends React.Component {
     });
   };
   render() {
+    const {post} = this.props;
     return (
       <ProfileContainer>
         <ProfileContent>
@@ -68,7 +69,7 @@ class Profile extends React.Component {
                 <Add onClick={ this.addPosts }>Add</Add>
               </AddPostS>
               <div>
-                { this.props.post.post.map((item,index) => {
+                {post.post.map((item,index) => {
                   return(
                     <A key={index}>
                       {item}
