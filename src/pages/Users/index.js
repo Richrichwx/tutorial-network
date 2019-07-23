@@ -109,9 +109,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  follow,
-  unFollow,
-  setUsers
+  
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
