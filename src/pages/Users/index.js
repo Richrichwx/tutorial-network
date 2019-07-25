@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { follow, setUsers, unFollow } from '../../store/users/users.action';
 
+import * as axios from 'axios'; //we export everything there
+
 const UsersContainer = styled.div`
   width: 800px;
   background: #c2a7a1;
@@ -19,52 +21,10 @@ class Users extends React.Component {
     const {users,setUsers} = this.props;
 
     if(users.users.length === 0)  {
-      setUsers([
-        {
-          id: 1,
-          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
-          fullName: 'Anna G.',
-          status: 'I am cute ',
-          location: {
-            city: 'Moscow',
-            country: 'Russia'
-          },
-          followed: false
-        },
-        {
-          id: 2,
-          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
-          fullName: 'Alex G.',
-          status: 'I am smile',
-          location: {
-            city: 'Minsk',
-            country: 'Belarus'
-          },
-          followed: true
-        },
-        {
-          id: 3,
-          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
-          fullName: 'June G.',
-          status: 'I am cute ',
-          location: {
-            city: 'NY',
-            country: 'Unated  State'
-          },
-          followed: true
-        },
-        {
-          id: 4,
-          image: 'http://stuki-druki.com/biofoto/Dmitriy-Egorov-3-01.jpg',
-          fullName: 'Marya G.',
-          status: 'I am cute ',
-          location: {
-            city: 'Kiev',
-            country: 'Ukraine'
-          },
-          followed: false
-        }
-      ]);
+      axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+        setUsers([
+        ]);
+      })
     }
 
     return (
