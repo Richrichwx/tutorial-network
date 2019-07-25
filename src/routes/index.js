@@ -3,7 +3,6 @@ import Dialogs from '../pages/Dialogs';
 import Users from '../pages/Users'
 
 const Routes = [
-
   {
     path: '/profile',
     to: '/',
