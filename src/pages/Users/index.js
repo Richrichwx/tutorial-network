@@ -18,17 +18,20 @@ const Img = styled.img`
 `;
 
 class Users extends React.Component {
+  getUsers  = () => {
+    if(this.props.users.users.length === 0)  {
+      axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+        this.props.setUsers(response.data.items);
+      })
+    }
+  };
   render() {
     const {users,setUsers} = this.props;
 
-    if(users.users.length === 0)  {
-      axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        setUsers(response.data.items);
-      })
-    }
 
     return (
       <UsersContainer>
+        <button onClick={this.getUsers}>Get users</button>
         {users.users.map((user) => {
           return (
             <div key={user.id}>
