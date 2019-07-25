@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
 import { follow, setUsers, unFollow } from '../../store/users/users.action';
 
@@ -22,8 +23,7 @@ class Users extends React.Component {
 
     if(users.users.length === 0)  {
       axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        setUsers([
-        ]);
+        setUsers(response.data.items);
       })
     }
 
@@ -34,7 +34,7 @@ class Users extends React.Component {
             <div key={user.id}>
               <span>
                 <div>
-                  <Img src={user.image} alt=""/>
+                  <Img src={user.photos.small !== null ? user.photos.small : avatar} alt=""/>
                 </div>
                  <div>
                    {user.followed?
@@ -48,12 +48,12 @@ class Users extends React.Component {
               </span>
               <span>
                 <span>
-                  <div>{user.fullName}</div>
+                  <div>{user.name}</div>
                    <div>{user.status}</div>
                 </span>
                  <span>
-                  <div>{user.location.city}</div>
-                   <div>{user.location.country}</div>
+                  <div>{'user.location.city'}</div>
+                   <div>{'user.location.country'}</div>
                 </span>
               </span>
             </div>
