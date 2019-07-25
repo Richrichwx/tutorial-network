@@ -18,50 +18,50 @@ const Img = styled.img`
 `;
 
 class Users extends React.Component {
-  getUsers  = () => {
-    if(this.props.users.users.length === 0)  {
-      axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-        this.props.setUsers(response.data.items);
-      })
-    }
-  };
+  constructor(props) {
+    super(props);
+    axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+      this.props.setUsers(response.data.items);
+    })
+  }
+
   render() {
-    const {users,setUsers} = this.props;
-
-
+    const { users } = this.props;
+    
     return (
       <UsersContainer>
-        <button onClick={this.getUsers}>Get users</button>
-        {users.users.map((user) => {
+        { users.users.map((user) => {
           return (
-            <div key={user.id}>
+            <div key={ user.id }>
               <span>
                 <div>
-                  <Img src={user.photos.small !== null ? user.photos.small : avatar} alt=""/>
+                  <Img src={ user.photos.small !== null ? user.photos.small : avatar } alt=""/>
                 </div>
                  <div>
-                   {user.followed?
+                   { user.followed ?
                      <button onClick={ () => {
-                       this.props.unFollow(user.id)}
+                       this.props.unFollow(user.id)
+                     }
                      }>UnFollow</button>
-                     : <button  onClick={ () => {
-                       this.props.follow(user.id)}
-                     } >Follow</button>}
+                     : <button onClick={ () => {
+                       this.props.follow(user.id)
+                     }
+                     }>Follow</button> }
                 </div>
               </span>
               <span>
                 <span>
-                  <div>{user.name}</div>
-                   <div>{user.status}</div>
+                  <div>{ user.name }</div>
+                   <div>{ user.status }</div>
                 </span>
                  <span>
-                  <div>{'user.location.city'}</div>
-                   <div>{'user.location.country'}</div>
+                  <div>{ 'user.location.city' }</div>
+                   <div>{ 'user.location.country' }</div>
                 </span>
               </span>
             </div>
           )
-        })}
+        }) }
       </UsersContainer>
     )
   }
