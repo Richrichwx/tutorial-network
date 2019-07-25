@@ -69,7 +69,7 @@ class Users extends React.Component {
 
     return (
       <UsersContainer>
-        {users.users.map((user,id) => {
+        {users.users.map((user) => {
           return (
             <div key={user.id}>
               <span>
