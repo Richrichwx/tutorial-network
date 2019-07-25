@@ -55,7 +55,6 @@ export default function (state = initialState, action) {
           if(user.id ===  action.userId) {
             return {...user, followed: true}
           }
-
           return user
         })
       }
@@ -67,7 +66,6 @@ export default function (state = initialState, action) {
           if(user.id ===  action.userId) {
             return {...user, followed: false}
           }
-
           return user
         })
       }
