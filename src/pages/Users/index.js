@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
-import { follow, setUsers, unFollow } from '../../store/users/users.action';
+import { follow, setPages, setUsers, unFollow } from '../../store/users/users.action';
 
 import * as axios from 'axios'; //we export everything there
 
@@ -24,10 +24,13 @@ font-weight: bold;
 class Users extends React.Component {
 
 componentDidMount() {
-  axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
     this.props.setUsers(response.data.items);
   })
 }
+  switchPages = (str) => {
+  this.props.setPages(str)
+};
   render() {
     const { users, pageSize, totalCountUsers, currentPage } = this.props;
     let pagesCount = Math.ceil(totalCountUsers / pageSize);
@@ -38,13 +41,13 @@ componentDidMount() {
     return (
       <UsersContainer>
         <div>
-          { pages.map((str,id )=> {
+          { pages.map((page,id )=> {
             return (
-              <span key={id}>
-                {currentPage === str ? (
-                  <b>{str}</b>
+              <span key={id} onClick={() => {this.switchPages(page)}}>
+                {currentPage === page ? (
+                  <b>{page}</b>
                 ) : (
-                  <span>{str}</span>
+                  <span>{page}</span>
                 )}
                 </span>
               )
@@ -97,7 +100,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   follow,
   unFollow,
-  setUsers
+  setUsers,
+  setPages
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);

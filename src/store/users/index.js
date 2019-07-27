@@ -34,6 +34,12 @@ export default function (state = initialState, action) {
         users: [...state.users, ...action.users]
       }
     }
+    case 'SET_PAGES' : {
+      return {
+        ...state,
+        currentPage: action.currentPage
+      }
+    }
     default:
       return state;
   }

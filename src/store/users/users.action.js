@@ -12,3 +12,8 @@ export const setUsers = (users) => ({
   type: 'SET_USERS',
   users
 });
+
+export const setPages = (currentPage) => ({
+  type: 'SET_PAGES',
+  currentPage
+});
