@@ -29,6 +29,13 @@ componentDidMount() {
 
     return (
       <UsersContainer>
+        <div>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
         { users.users.map((user) => {
           return (
             <div key={ user.id }>
@@ -67,7 +74,9 @@ componentDidMount() {
 }
 
 const mapStateToProps = state => ({
-  users: state.users
+  users: state.users,
+  pageSize: state.users,
+  totalCountUsers: state.totalCountUsers,
 });
 
 const mapDispatchToProps = {

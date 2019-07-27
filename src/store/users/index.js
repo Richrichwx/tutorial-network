@@ -1,5 +1,7 @@
 const initialState = {
-  users:[]
+  users:[],
+  pageSize: 5,
+  totalCountUsers: 0
 };
 export default function (state = initialState, action) {
   switch (action.type) {
