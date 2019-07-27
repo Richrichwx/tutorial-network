@@ -32,7 +32,8 @@ componentDidMount() {
     const { users, pageSize, totalCountUsers, currentPage } = this.props;
     let pagesCount = totalCountUsers / pageSize;
     let pages = [];
-    for(let i=1; i <= pagesCount; i++) {
+    let rounding = Math.ceil(pagesCount);
+    for(let i=1; i <= rounding; i++) {
       pages.push(i);
     }
     return (
