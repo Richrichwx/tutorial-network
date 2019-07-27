@@ -17,3 +17,8 @@ export const setPages = (currentPage) => ({
   type: 'SET_PAGES',
   currentPage
 });
+
+export const setTotalCount = (count) => ({
+  type: 'SET_TOTAL_COUNT',
+  count
+});

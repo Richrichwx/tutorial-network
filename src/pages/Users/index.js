@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
-import { follow, setPages, setUsers, unFollow } from '../../store/users/users.action';
+import { follow, setPages, setTotalCount, setUsers, unFollow } from '../../store/users/users.action';
 
-import * as axios from 'axios'; //we export everything there
+import * as axios from 'axios';
+import { NavLink } from 'react-router-dom';
+//we export everything there
 
 const UsersContainer = styled.div`
   width: 800px;
@@ -24,13 +26,22 @@ font-weight: bold;
 class Users extends React.Component {
 
 componentDidMount() {
-  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
+  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+       .then(response => {
     this.props.setUsers(response.data.items);
+    this.props.setTotalCount(response.data.totalCount);
   })
 }
   switchPages = (str) => {
-  this.props.setPages(str)
+  this.props.setPages(str);axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`).then(response => {
+      this.props.setUsers(response.data.items);
+    })
 };
+
+  navigateTo = (e, path) => {
+    e.preventDefault();
+    window.navigate.push(`/${path}`)
+  };
   render() {
     const { users, pageSize, totalCountUsers, currentPage } = this.props;
     let pagesCount = Math.ceil(totalCountUsers / pageSize);
@@ -58,7 +69,9 @@ componentDidMount() {
             <div key={ user.id }>
               <span>
                 <div>
-                  <Img src={ user.photos.small !== null ? user.photos.small : avatar } alt=""/>
+                    <a href="/profile" onClick={(e) => this.navigateTo(e, `profile/${user.id}`)}>
+                      <Img src={ user.photos.small !== null ? user.photos.small : avatar } alt=""/>
+                     </a>
                 </div>
                  <div>
                    { user.followed ?
@@ -101,7 +114,8 @@ const mapDispatchToProps = {
   follow,
   unFollow,
   setUsers,
-  setPages
+  setPages,
+  setTotalCount
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);

@@ -11,6 +11,13 @@ const Routes = [
     component: Profile,
   },
   {
+    path: '/profile/:id',
+    to: '/profile',
+    title: 'profile',
+    description: '',
+    component: Profile,
+  },
+  {
     path: '/dialogs',
     to: '/dialogs',
     title: 'dialogs',

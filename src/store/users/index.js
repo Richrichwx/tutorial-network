@@ -1,7 +1,7 @@
 const initialState = {
   users:[],
-  pageSize: 5,
-  totalCountUsers: 20,
+  pageSize: 10,
+  totalCountUsers: 0,
   currentPage: 1
 };
 export default function (state = initialState, action) {
@@ -31,13 +31,19 @@ export default function (state = initialState, action) {
     case 'SET_USERS' : {
       return {
         ...state,
-        users: [...state.users, ...action.users]
+        users: action.users
       }
     }
     case 'SET_PAGES' : {
       return {
         ...state,
         currentPage: action.currentPage
+      }
+    }
+    case 'SET_TOTAL_COUNT' : {
+      return {
+        ...state,
+        totalCountUsers: action.count
       }
     }
     default:
