@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { addPost } from '../../store/profile/profile.action';
+import { addPost } from '../../store/post/post.action';
 
 const PostsContainer = styled.div`
   width: 800px;
