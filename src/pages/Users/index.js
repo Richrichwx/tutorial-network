@@ -17,6 +17,10 @@ const Img = styled.img`
   height: 50px;
 `;
 
+const asd = styled.p`
+font-weight: bold;
+`;
+
 class Users extends React.Component {
 
 componentDidMount() {
@@ -25,16 +29,26 @@ componentDidMount() {
   })
 }
   render() {
-    const { users } = this.props;
-
+    const { users, pageSize, totalCountUsers, currentPage } = this.props;
+    let pagesCount = totalCountUsers / pageSize;
+    let pages = [];
+    for(let i=1; i <= pagesCount; i++) {
+      pages.push(i);
+    }
     return (
       <UsersContainer>
         <div>
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
+          { pages.map((str,id )=> {
+            return (
+              <span key={id}>
+                {currentPage === str ? (
+                  <b>{str}</b>
+                ) : (
+                  <span>{str}</span>
+                )}
+                </span>
+              )
+          })}
         </div>
         { users.users.map((user) => {
           return (
@@ -75,8 +89,9 @@ componentDidMount() {
 
 const mapStateToProps = state => ({
   users: state.users,
-  pageSize: state.users,
-  totalCountUsers: state.totalCountUsers,
+  pageSize: state.users.pageSize,
+  totalCountUsers: state.users.totalCountUsers,
+  currentPage: state.users.currentPage
 });
 
 const mapDispatchToProps = {
