@@ -12,7 +12,6 @@ class RouterWrapper extends React.Component {
         <>
           <Switch>
             {Routes.map((prop) => (
-
               <Route
                 exact={true}
                 key={prop.path}
