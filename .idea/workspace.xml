@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/profile/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/profile/profile.action.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfileInfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/profile/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,22 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+            <state relative-caret-position="207">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -48,8 +33,20 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/profile/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="23">
+              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/pages/Profile/index.js" />
         <option value="$PROJECT_DIR$/src/store/profileInfo/profileInfo.action.js" />
         <option value="$PROJECT_DIR$/src/store/profileInfo/index.js" />
-        <option value="$PROJECT_DIR$/src/store/profile/index.js" />
         <option value="$PROJECT_DIR$/src/store/profile/profile.action.js" />
+        <option value="$PROJECT_DIR$/src/store/profile/index.js" />
         <option value="$PROJECT_DIR$/src/components/ProfileInfo/index.js" />
       </list>
     </option>
@@ -278,6 +275,13 @@
               <item name="store" type="462c0819:PsiDirectoryNode" />
               <item name="profile" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tutorial-network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial-network" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -337,12 +341,12 @@
       <workItem from="1562688587490" duration="2618000" />
       <workItem from="1562967758497" duration="773000" />
       <workItem from="1563206754478" duration="27645000" />
-      <workItem from="1563904703994" duration="21627000" />
+      <workItem from="1563904703994" duration="24055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138976000" />
+    <option name="totallyTimeSpent" value="141404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="961" extended-state="0" />
@@ -646,10 +650,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/profile/profile.action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" column="18" lean-forward="true" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -658,32 +679,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/profile/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/profile/profile.action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="23">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        <state relative-caret-position="384">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

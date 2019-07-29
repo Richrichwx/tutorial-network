@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import * as axios from 'axios/index';
 import { connect } from 'react-redux';
 import { setUserProfile } from '../../store/profile/profile.action';
+import avatar from '../../assets/image.jpeg';
 
 const Avatar = styled.img`
   width: 150px;
@@ -38,16 +39,22 @@ class ProfileInfo extends React.Component {
          })
   }
   render() {
+    console.log(this.props.profile.profile.photos);
     return (
       <ProfileContainer>
+        {this.props.profile.profile.photos ? (
+          <Avatar src={this.props.profile.profile.photos.large}/>
+        ): (
+          <Avatar src={avatar}/>
+        )}
 
-        <Avatar src={this.props.profile.profile.photos}/>
           <ProfileInfoCont>
-          <Title></Title>
-        <TextInfo>{this.props.profile.profile.fullName}
+          <Title>{this.props.profile.profile.fullName}</Title>
+        <TextInfo>
           {this.props.profile.profile.lookingForAJobDescription}</TextInfo>
         </ProfileInfoCont>
       </ProfileContainer>
+
     )
   }
 }
