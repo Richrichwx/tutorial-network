@@ -3,7 +3,6 @@ const initialState = {
 };
 
 export default function (state = initialState,action) {
-  console.log(action.profile)
   switch (action.type) {
     case 'SET_USER_PROFILE': {
       return {

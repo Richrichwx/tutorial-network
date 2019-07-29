@@ -33,7 +33,7 @@ const TextInfo = styled.p`
 
 class ProfileInfo extends React.Component {
   componentDidMount() {
-    axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`)
+    axios.get(`https://social-network.samuraijs.com/api/1.0/profile`)
          .then(response => {
            this.props.setUserProfile(response.data)
          })
