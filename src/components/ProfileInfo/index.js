@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import avatar from '../../assets/image.jpeg';
+import * as axios from 'axios/index';
+import { connect } from 'react-redux';
+import { setUserProfile } from '../../store/profile/profile.action';
 
 const Avatar = styled.img`
   width: 150px;
@@ -29,19 +31,34 @@ const TextInfo = styled.p`
 `;
 
 class ProfileInfo extends React.Component {
+  componentDidMount() {
+    axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`)
+         .then(response => {
+           this.props.setUserProfile(response.data)
+         })
+  }
   render() {
     return (
       <ProfileContainer>
-        <Avatar src={avatar}></Avatar>
-        <ProfileInfoCont>
-          <Title>Анна Гусева</Title>
-          <TextInfo>Понятие «содержание высказывания» связано
-            с категорией информативности речи и присуще только тексту.
-          </TextInfo>
+
+        <Avatar src={this.props.profile.profile.photos}/>
+          <ProfileInfoCont>
+          <Title></Title>
+        <TextInfo>{this.props.profile.profile.fullName}
+          {this.props.profile.profile.lookingForAJobDescription}</TextInfo>
         </ProfileInfoCont>
       </ProfileContainer>
     )
   }
 }
 
-export default ProfileInfo;
+const mapStateToProps = state => ({
+  profile: state.profile
+});
+
+const mapDispatchToProps = {
+  setUserProfile
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileInfo)
+
