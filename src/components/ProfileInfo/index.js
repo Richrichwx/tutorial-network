@@ -32,14 +32,14 @@ const TextInfo = styled.p`
 `;
 
 class ProfileInfo extends React.Component {
+
   componentDidMount() {
-    axios.get(`https://social-network.samuraijs.com/api/1.0/profile`)
+    axios.get(`https://social-network.samuraijs.com/api/1.0/profile/id`)
          .then(response => {
            this.props.setUserProfile(response.data)
          })
   }
   render() {
-    console.log(this.props.profile.profile.photos);
     return (
       <ProfileContainer>
         {this.props.profile.profile.photos ? (

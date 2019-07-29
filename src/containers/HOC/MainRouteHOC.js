@@ -2,7 +2,6 @@ import React from 'react'
 import { withRouter } from 'react-router'
 
 function MainRouteHOC({ location, component: Component, title, description, isMain, match, history, ...rest }) {
-  debugger
   const isStart = localStorage.getItem('first');
   window.navigate = history;
   if (history.location.pathname === '/') history.push('/');
