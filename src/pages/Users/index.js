@@ -18,9 +18,6 @@ const Img = styled.img`
   height: 50px;
 `;
 
-const asd = styled.p`
-font-weight: bold;
-`;
 
 class Users extends React.Component {
 
