@@ -16,7 +16,6 @@ class RouterWrapper extends React.Component {
                 exact={true}
                 key={prop.path}
                 path={prop.path}
-                match={prop.match}
                 render={(props) => (
                   <>
                     <MainRouteHOC

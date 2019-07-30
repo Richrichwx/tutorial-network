@@ -22,7 +22,6 @@ const ProfileContentBottom = styled.div`
 
 class Profile extends React.Component {
   render() {
-    console.log(this.props.match)
     return (
       <ProfileContainer>
         <ProfileContent>
