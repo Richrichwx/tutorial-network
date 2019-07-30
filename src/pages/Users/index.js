@@ -29,7 +29,8 @@ componentDidMount() {
   })
 }
   switchPages = (str) => {
-  this.props.setPages(str);axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`).then(response => {
+  this.props.setPages(str);
+  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`).then(response => {
       this.props.setUsers(response.data.items);
     })
 };
