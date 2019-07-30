@@ -1,6 +1,7 @@
 import Profile from '../pages/Profile';
 import Dialogs from '../pages/Dialogs';
 import Users from '../pages/Users'
+import Login from '../pages/Login';
 
 const Routes = [
   {
@@ -37,6 +38,13 @@ const Routes = [
     title: 'users',
     description: 'users',
     component: Users,
+  },
+  {
+    path: '/login',
+    to: '/login',
+    title: 'Войти',
+    description: '',
+    component: Login,
   },
   ];
 
