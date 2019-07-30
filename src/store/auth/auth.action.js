@@ -1,4 +1,8 @@
-export const setAutData = (data) => ({
+export const setAutData = (userId,email,login) => ({
   type: 'SET_AUTH_DATA',
-  data,
+  data : {
+    userId,
+    email,
+    login
+  },
 });
