@@ -34,24 +34,30 @@ const TextInfo = styled.p`
 class ProfileInfo extends React.Component {
 
   componentDidMount() {
-    axios.get(`https://social-network.samuraijs.com/api/1.0/profile/id`)
-         .then(response => {
-           this.props.setUserProfile(response.data)
-         })
+        let id = this.props.match;
+        if(!id) {
+          id = 2;
+        }
+          axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + id)
+               .then(response => {
+                 this.props.setUserProfile(response.data)
+               })
   }
+
   render() {
+
     return (
       <ProfileContainer>
-        {this.props.profile.profile.photos ? (
-          <Avatar src={this.props.profile.profile.photos.large}/>
-        ): (
-          <Avatar src={avatar}/>
-        )}
+        { this.props.profile.profile.photos ? (
+          <Avatar src={ this.props.profile.profile.photos.large }/>
+        ) : (
+          <Avatar src={ avatar }/>
+        ) }
 
-          <ProfileInfoCont>
-          <Title>{this.props.profile.profile.fullName}</Title>
-        <TextInfo>
-          {this.props.profile.profile.lookingForAJobDescription}</TextInfo>
+        <ProfileInfoCont>
+          <Title>{ this.props.profile.profile.fullName }</Title>
+          <TextInfo>
+            { this.props.profile.profile.lookingForAJobDescription }</TextInfo>
         </ProfileInfoCont>
       </ProfileContainer>
 

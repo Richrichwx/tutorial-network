@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { follow, setPages, setTotalCount, setUsers, unFollow } from '../../store/users/users.action';
 
 import * as axios from 'axios';
-import { NavLink } from 'react-router-dom';
 //we export everything there
 
 const UsersContainer = styled.div`
