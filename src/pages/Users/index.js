@@ -78,7 +78,7 @@ componentDidMount() {
                  <div>
                    { user.followed ?
                      <button onClick={ () => {
-                       axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
+                       axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
                          withCredentials: true,
                          headers: {
                            "API-KEY": "f60e318e-a7eb-46ab-aa61-dd840b8c28fa"
