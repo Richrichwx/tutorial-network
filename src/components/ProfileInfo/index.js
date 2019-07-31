@@ -38,7 +38,7 @@ class ProfileInfo extends React.Component {
         if(!id) {
           id = 2;
         }
-          axios.get(`https://social-network.samuraijs.com/api/1.0/profile/` + id)
+          axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${id}`)
                .then(response => {
                  this.props.setUserProfile(response.data)
                })

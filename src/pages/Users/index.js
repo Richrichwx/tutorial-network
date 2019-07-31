@@ -22,7 +22,9 @@ const Img = styled.img`
 class Users extends React.Component {
 
 componentDidMount() {
-  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
+    withCredentials: true,
+  })
        .then(response => {
     this.props.setUsers(response.data.items);
     this.props.setTotalCount(response.data.totalCount);
@@ -30,7 +32,10 @@ componentDidMount() {
 }
   switchPages = (str) => {
   this.props.setPages(str);
-  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`).then(response => {
+  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`, {
+    withCredentials: true
+  })
+       .then(response => {
       this.props.setUsers(response.data.items);
     })
 };
@@ -73,11 +78,31 @@ componentDidMount() {
                  <div>
                    { user.followed ?
                      <button onClick={ () => {
-                       this.props.unFollow(user.id)
+                       axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {}, {
+                         withCredentials: true,
+                         headers: {
+                           "API-KEY": "f60e318e-a7eb-46ab-aa61-dd840b8c28fa"
+                         }
+                       })
+                            .then(response => {
+                              if (response.data.resultCode === 0) {
+                                this.props.unFollow(user.id)
+                              }
+                            })
                      }
                      }>UnFollow</button>
                      : <button onClick={ () => {
-                       this.props.follow(user.id)
+                       axios.post(`https://social-network.samuraijs.com/api/1.0/follow/` + user.id, {}, {
+                         withCredentials: true,
+                         headers: {
+                           "API-KEY": "f60e318e-a7eb-46ab-aa61-dd840b8c28fa"
+                         }
+                       })
+                            .then(response => {
+                              if (response.data.resultCode === 0) {
+                                this.props.follow(user.id)
+                              }
+                            })
                      }
                      }>Follow</button> }
                 </div>
