@@ -4,6 +4,7 @@ import * as axios from 'axios/index';
 import { connect } from 'react-redux';
 import { setUserProfile } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
+import { getProfile } from '../../store/profile/profile.api';
 
 const Avatar = styled.img`
   width: 150px;
@@ -38,9 +39,9 @@ class ProfileInfo extends React.Component {
         if(!id) {
           id = 2;
         }
-          axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${id}`)
-               .then(response => {
-                 this.props.setUserProfile(response.data)
+        getProfile(id)
+               .then(data => {
+                 this.props.setUserProfile(data)
                })
   }
 
