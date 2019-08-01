@@ -14,6 +14,8 @@ const HeaderContainer = styled.div`
 class Header extends React.Component {
 
   componentDidMount() {
+
+
     getAuth()
          .then(data => {
            if(data.resultCode === 0) {
