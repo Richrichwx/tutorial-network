@@ -2,7 +2,8 @@ const initialState = {
   users:[],
   pageSize: 10,
   totalCountUsers: 0,
-  currentPage: 1
+  currentPage: 1,
+  followingProgress: false
 };
 export default function (state = initialState, action) {
   switch (action.type) {

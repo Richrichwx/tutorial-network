@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/auth/auth.api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/auth/auth.api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/users/users.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/users/users.action.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,41 +18,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="auth.api.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/store/auth/auth.api.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/profile/profile.api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/users/users.api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="58" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="58" />
+            <state relative-caret-position="115">
+              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
+        <entry file="file://$PROJECT_DIR$/src/store/users/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="361">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.action.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -108,8 +96,6 @@
         <option value="$PROJECT_DIR$/src/pages/Dialogs/index.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/index.js" />
-        <option value="$PROJECT_DIR$/src/store/users/users.action.js" />
-        <option value="$PROJECT_DIR$/src/store/users/index.js" />
         <option value="$PROJECT_DIR$/src/store/post/post.action.js" />
         <option value="$PROJECT_DIR$/src/components/MyPosts/index.js" />
         <option value="$PROJECT_DIR$/src/store/profileInfo/profileInfo.action.js" />
@@ -127,12 +113,14 @@
         <option value="$PROJECT_DIR$/src/store/auth/index.js" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
         <option value="$PROJECT_DIR$/src/store/users/users.api.js" />
-        <option value="$PROJECT_DIR$/src/pages/Users/index.js" />
         <option value="$PROJECT_DIR$/src/store/profile/profile.api.js" />
         <option value="$PROJECT_DIR$/src/components/ProfileInfo/index.js" />
         <option value="$PROJECT_DIR$/src/.env" />
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/store/auth/auth.api.js" />
+        <option value="$PROJECT_DIR$/src/pages/Users/index.js" />
+        <option value="$PROJECT_DIR$/src/store/users/index.js" />
+        <option value="$PROJECT_DIR$/src/store/users/users.action.js" />
       </list>
     </option>
   </component>
@@ -239,7 +227,21 @@
               <item name="tutorial-network" type="b2602c69:ProjectViewProjectNode" />
               <item name="tutorial-network" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tutorial-network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial-network" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tutorial-network" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tutorial-network" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,12 +305,12 @@
       <workItem from="1562967758497" duration="773000" />
       <workItem from="1563206754478" duration="27645000" />
       <workItem from="1563904703994" duration="43528000" />
-      <workItem from="1564678969520" duration="3803000" />
+      <workItem from="1564678969520" duration="5530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164683000" />
+    <option name="totallyTimeSpent" value="166410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="961" extended-state="0" />
@@ -456,20 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/users/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/messages/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -587,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Profile/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -616,13 +597,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Login/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/profile/profile.api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="34" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/core/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -648,13 +622,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
+    <entry file="file://$PROJECT_DIR$/src/store/auth/auth.api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/profile/profile.api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -665,10 +643,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/auth/auth.api.js">
+    <entry file="file://$PROJECT_DIR$/src/components/ProfileInfo/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="276">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/users/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

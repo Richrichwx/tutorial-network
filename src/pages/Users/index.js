@@ -2,7 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
-import { follow, setPages, setTotalCount, setUsers, unFollow } from '../../store/users/users.action';
+import {
+  follow,
+  setPages,
+  setTotalCount,
+  setUsers,
+  unFollow
+} from '../../store/users/users.action';
 
 import { followUsers, getUsers, unFollowUsers } from '../../store/users/users.api';
 
@@ -118,7 +124,7 @@ const mapStateToProps = state => ({
   users: state.users,
   pageSize: state.users.pageSize,
   totalCountUsers: state.users.totalCountUsers,
-  currentPage: state.users.currentPage
+  currentPage: state.users.currentPage,
 });
 
 const mapDispatchToProps = {
@@ -126,7 +132,7 @@ const mapDispatchToProps = {
   unFollow,
   setUsers,
   setPages,
-  setTotalCount
+  setTotalCount,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
