@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { follow, setPages, setTotalCount, setUsers, unFollow } from '../../store/users/users.action';
 
 import * as axios from 'axios';
+import { followUsers, getUsers } from '../../store/users/users.api';
+
 //we export everything there
 
 const UsersContainer = styled.div`
@@ -21,57 +23,55 @@ const Img = styled.img`
 
 class Users extends React.Component {
 
-componentDidMount() {
-  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`, {
-    withCredentials: true,
-  })
-       .then(response => {
-    this.props.setUsers(response.data.items);
-    this.props.setTotalCount(response.data.totalCount);
-  })
-}
+  componentDidMount() {
+
+    getUsers(this.props.currentPage, this.props.pageSize)
+      .then(data => {
+        this.props.setUsers(data.items);
+        this.props.setTotalCount(data.totalCount);
+      })
+  }
+
   switchPages = (str) => {
-  this.props.setPages(str);
-  axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${str}&count=${this.props.pageSize}`, {
-    withCredentials: true
-  })
-       .then(response => {
-      this.props.setUsers(response.data.items);
-    })
-};
+    getUsers(str, this.props.pageSize)
+      .then(data => {
+        this.props.setUsers(data.items);
+      })
+  };
 
   navigateTo = (e, path) => {
     e.preventDefault();
     window.navigate.push(`/${path}`)
   };
+
   render() {
     const { users, pageSize, totalCountUsers, currentPage } = this.props;
     let pagesCount = Math.ceil(totalCountUsers / pageSize);
     let pages = [];
-    for(let i=1; i <= pagesCount; i++) {
+    for (let i = 1; i <= pagesCount; i++) {
       pages.push(i);
     }
     return (
       <UsersContainer>
         <div>
-          { pages.map((page,id )=> {
+          { pages.map((page, id) => {
             return (
-              <span key={id} onClick={() => {this.switchPages(page)}}>
-                {currentPage === page ? (
-                  <b>{page}</b>
+              <span key={ id } onClick={ () => {this.switchPages(page)} }>
+                { currentPage === page ? (
+                  <b>{ page }</b>
                 ) : (
-                  <span>{page}</span>
-                )}
+                  <span>{ page }</span>
+                ) }
                 </span>
-              )
-          })}
+            )
+          }) }
         </div>
         { users.users.map((user) => {
           return (
             <div key={ user.id }>
               <span>
                 <div>
-                    <a href="/profile" onClick={(e) => this.navigateTo(e, `profile/${user.id}`)}>
+                    <a href="/profile" onClick={ (e) => this.navigateTo(e, `profile/${user.id}`) }>
                       <Img src={ user.photos.small !== null ? user.photos.small : avatar } alt=""/>
                      </a>
                 </div>
@@ -81,7 +81,7 @@ componentDidMount() {
                        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
                          withCredentials: true,
                          headers: {
-                           "API-KEY": "f60e318e-a7eb-46ab-aa61-dd840b8c28fa"
+                           'API-KEY': 'f60e318e-a7eb-46ab-aa61-dd840b8c28fa'
                          }
                        })
                             .then(response => {
@@ -92,14 +92,9 @@ componentDidMount() {
                      }
                      }>UnFollow</button>
                      : <button onClick={ () => {
-                       axios.post(`https://social-network.samuraijs.com/api/1.0/follow/` + user.id, {}, {
-                         withCredentials: true,
-                         headers: {
-                           "API-KEY": "f60e318e-a7eb-46ab-aa61-dd840b8c28fa"
-                         }
-                       })
-                            .then(response => {
-                              if (response.data.resultCode === 0) {
+                       followUsers(user.id)
+                            .then(data => {
+                              if (data.resultCode === 0) {
                                 this.props.follow(user.id)
                               }
                             })
