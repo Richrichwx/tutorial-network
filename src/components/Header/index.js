@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import * as axios from 'axios/index';
 import { connect } from 'react-redux';
 import { setAuthData } from '../../store/auth/auth.action';
+import { getAuth } from '../../store/auth/auth.api';
 
 const HeaderContainer = styled.div`
   width: 1000px;
@@ -14,12 +15,10 @@ const HeaderContainer = styled.div`
 class Header extends React.Component {
 
   componentDidMount() {
-    axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-          withCredentials: true
-    })
-         .then(response => {
-           if(response.data.resultCode === 0) {
-             let { id, email,login } = response.data.data;
+    getAuth()
+         .then(data => {
+           if(data.resultCode === 0) {
+             let { id, email,login } = data.data;
              this.props.setAuthData(id, email,login  )
            }
          })
