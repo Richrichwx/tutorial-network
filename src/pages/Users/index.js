@@ -4,8 +4,7 @@ import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
 import { follow, setPages, setTotalCount, setUsers, unFollow } from '../../store/users/users.action';
 
-import * as axios from 'axios';
-import { followUsers, getUsers } from '../../store/users/users.api';
+import { followUsers, getUsers, unFollowUsers } from '../../store/users/users.api';
 
 //we export everything there
 
@@ -78,14 +77,9 @@ class Users extends React.Component {
                  <div>
                    { user.followed ?
                      <button onClick={ () => {
-                       axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
-                         withCredentials: true,
-                         headers: {
-                           'API-KEY': 'f60e318e-a7eb-46ab-aa61-dd840b8c28fa'
-                         }
-                       })
-                            .then(response => {
-                              if (response.data.resultCode === 0) {
+                       unFollowUsers(user.id)
+                            .then(data => {
+                              if (data.resultCode === 0) {
                                 this.props.unFollow(user.id)
                               }
                             })
