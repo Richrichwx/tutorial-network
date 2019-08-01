@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import * as axios from 'axios/index';
 import { connect } from 'react-redux';
 import { setAuthData } from '../../store/auth/auth.action';
 import { getAuth } from '../../store/auth/auth.api';

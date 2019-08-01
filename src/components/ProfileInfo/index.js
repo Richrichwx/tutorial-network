@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import * as axios from 'axios/index';
 import { connect } from 'react-redux';
 import { setUserProfile } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
