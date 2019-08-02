@@ -29,7 +29,8 @@ class Users extends React.Component {
   }
 
   switchPages = (str) => {
-    this.props.getUsersThunk(str, this.props.pageSize)
+    this.props.getUsersThunk(str, this.props.pageSize);
+
   };
 
   navigateTo = (e, path) => {
@@ -49,7 +50,7 @@ class Users extends React.Component {
         <div>
           { pages.map((page, id) => {
             return (
-              <span key={ id } onClick={ () => {this.switchPages(page)} }>
+              <span key={ id } onClick={ () => {  this.switchPages(page)} }>
                 { currentPage === page ? (
                   <b>{ page }</b>
                 ) : (
