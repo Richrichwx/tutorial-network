@@ -30,9 +30,12 @@ export const getUsersThunk = (currentPage,pageSize) => {
     getUsers(currentPage,pageSize)
       .then(data => {
         dispatch(setUsers(data.items));
+        dispatch(setPages(currentPage));
         dispatch(setTotalCount(data.totalCount));
       })
+
 }
+
 };
 
 export const followUsersThunk = (id) => {

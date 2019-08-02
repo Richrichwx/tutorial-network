@@ -30,7 +30,7 @@ class Users extends React.Component {
 
   switchPages = (str) => {
     this.props.getUsersThunk(str, this.props.pageSize);
-
+    console.log(str)
   };
 
   navigateTo = (e, path) => {
