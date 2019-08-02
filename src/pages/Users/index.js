@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
 import {
-  follow,
+  follow, getUsersThunk,
   setPages,
   setTotalCount,
   setUsers,
@@ -29,19 +29,16 @@ const Img = styled.img`
 class Users extends React.Component {
 
   componentDidMount() {
-
-    getUsers(this.props.currentPage, this.props.pageSize)
-      .then(data => {
-        this.props.setUsers(data.items);
-        this.props.setTotalCount(data.totalCount);
-      })
+    this.props.getUsersThunk(this.props.currentPage,this.props.pageSize);
+    //getUsers(this.props.currentPage, this.props.pageSize)
+      //.then(data => {
+        //this.props.setUsers(data.items);
+       // this.props.setTotalCount(data.totalCount);
+      //})//
   }
 
   switchPages = (str) => {
-    getUsers(str, this.props.pageSize)
-      .then(data => {
-        this.props.setUsers(data.items);
-      })
+    this.props.getUsersThunk(str, this.props.pageSize)
   };
 
   navigateTo = (e, path) => {
@@ -133,6 +130,7 @@ const mapDispatchToProps = {
   setUsers,
   setPages,
   setTotalCount,
+  getUsersThunk
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
