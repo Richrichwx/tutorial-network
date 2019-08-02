@@ -30,11 +30,6 @@ class Users extends React.Component {
 
   componentDidMount() {
     this.props.getUsersThunk(this.props.currentPage,this.props.pageSize);
-    //getUsers(this.props.currentPage, this.props.pageSize)
-      //.then(data => {
-        //this.props.setUsers(data.items);
-       // this.props.setTotalCount(data.totalCount);
-      //})//
   }
 
   switchPages = (str) => {
