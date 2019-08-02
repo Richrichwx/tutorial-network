@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff983475-b018-43ff-a9fe-c87e984c507c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/pages/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/users/users.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/users/users.action.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="31" column="73" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
+            <state relative-caret-position="-1099">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -49,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.action.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="users.action.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
+            <state relative-caret-position="292">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -132,8 +133,8 @@
         <option value="$PROJECT_DIR$/src/components/Header/index.js" />
         <option value="$PROJECT_DIR$/src/store/auth/auth.api.js" />
         <option value="$PROJECT_DIR$/src/store/users/index.js" />
-        <option value="$PROJECT_DIR$/src/store/users/users.action.js" />
         <option value="$PROJECT_DIR$/src/pages/Users/index.js" />
+        <option value="$PROJECT_DIR$/src/store/users/users.action.js" />
       </list>
     </option>
   </component>
@@ -318,12 +319,12 @@
       <workItem from="1562967758497" duration="773000" />
       <workItem from="1563206754478" duration="27645000" />
       <workItem from="1563904703994" duration="43528000" />
-      <workItem from="1564678969520" duration="8274000" />
+      <workItem from="1564678969520" duration="9298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169154000" />
+    <option name="totallyTimeSpent" value="170178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="961" extended-state="0" />
@@ -382,7 +383,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -669,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/users/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-582">
@@ -685,11 +679,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Users/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="31" column="73" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
+        <state relative-caret-position="-1099">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/users/users.action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
         </state>
       </provider>
     </entry>

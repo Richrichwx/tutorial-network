@@ -3,15 +3,11 @@ import styled from 'styled-components';
 import avatar from '../../assets/image.jpeg';
 import { connect } from 'react-redux';
 import {
-  follow, getUsersThunk,
+  followUsersThunk,
+  getUsersThunk,
   setPages,
-  setTotalCount,
-  setUsers,
-  unFollow
+  unFollowUsersThunk
 } from '../../store/users/users.action';
-
-import { followUsers, getUsers, unFollowUsers } from '../../store/users/users.api';
-
 //we export everything there
 
 const UsersContainer = styled.div`
@@ -75,21 +71,11 @@ class Users extends React.Component {
                  <div>
                    { user.followed ?
                      <button onClick={ () => {
-                       unFollowUsers(user.id)
-                            .then(data => {
-                              if (data.resultCode === 0) {
-                                this.props.unFollow(user.id)
-                              }
-                            })
+                       this.props.unFollowUsersThunk(user.id)
                      }
                      }>UnFollow</button>
                      : <button onClick={ () => {
-                       followUsers(user.id)
-                            .then(data => {
-                              if (data.resultCode === 0) {
-                                this.props.follow(user.id)
-                              }
-                            })
+                       this.props.followUsersThunk(user.id)
                      }
                      }>Follow</button> }
                 </div>
@@ -120,12 +106,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  follow,
-  unFollow,
-  setUsers,
   setPages,
-  setTotalCount,
-  getUsersThunk
+  getUsersThunk,
+  followUsersThunk,
+  unFollowUsersThunk
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Users);
