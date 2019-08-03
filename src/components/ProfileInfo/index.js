@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { setUserProfile } from '../../store/profile/profile.action';
+import { setUserProfileThunk } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
-import { getProfile } from '../../store/profile/profile.api';
 
 const Avatar = styled.img`
   width: 150px;
@@ -38,10 +37,7 @@ class ProfileInfo extends React.Component {
         if(!id) {
           id = 2;
         }
-        getProfile(id)
-               .then(data => {
-                 this.props.setUserProfile(data)
-               })
+    this.props.setUserProfileThunk(id)
   }
 
   render() {
@@ -70,7 +66,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setUserProfile
+  setUserProfileThunk
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileInfo)
