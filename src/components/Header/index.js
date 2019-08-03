@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
-import { setAuthData } from '../../store/auth/auth.action';
-import { getAuth } from '../../store/auth/auth.api';
+import { setAuthDataThunk } from '../../store/auth/auth.action';
 
 const HeaderContainer = styled.div`
   width: 1000px;
@@ -14,15 +13,7 @@ const HeaderContainer = styled.div`
 class Header extends React.Component {
 
   componentDidMount() {
-
-
-    getAuth()
-         .then(data => {
-           if(data.resultCode === 0) {
-             let { id, email,login } = data.data;
-             this.props.setAuthData(id, email,login  )
-           }
-         })
+    this.props.setAuthDataThunk()
   }
 
   navigateTo = (e, path) => {
@@ -47,7 +38,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setAuthData
+  setAuthDataThunk
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
