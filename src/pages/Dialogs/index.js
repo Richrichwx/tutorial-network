@@ -79,7 +79,8 @@ class Dialogs extends React.Component {
 
 const mapStateToProps = state => ({
   message: state.messages,
-  nameUser: state.nameDialogs
+  nameUser: state.nameDialogs,
+  isAuth: state.auth.isAuth
 });
 
 const mapDispatchToProps = {
