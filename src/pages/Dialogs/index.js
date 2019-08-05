@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
+import { Redirect } from 'react-router';
 
 
 const DialogsContainer = styled.div`
@@ -47,7 +48,9 @@ class Dialogs extends React.Component {
   };
 
   render() {
-    const {message,nameUser} = this.props;
+    const {message,nameUser,isAuth} = this.props;
+    if(!isAuth) return <Redirect  to="/login" />
+
     return (
       <DialogsContainer>
         {nameUser.nameUser.map((name,index) => {
