@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setUserProfileThunk } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
 import { Redirect } from 'react-router';
+import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
 
 const Avatar = styled.img`
   width: 150px;
@@ -43,7 +44,7 @@ class ProfileInfo extends React.Component {
 
   render() {
     const {isAuth} = this.props;
-    if(!isAuth) return <Redirect  to="/login" />
+
     return (
       <ProfileContainer>
         { this.props.profile.profile.photos ? (
@@ -62,7 +63,7 @@ class ProfileInfo extends React.Component {
     )
   }
 }
-
+let AuthRedirectComponent = WithAuthRedirect(ProfileInfo);
 const mapStateToProps = state => ({
   profile: state.profile,
   isAuth: state.auth.isAuth
@@ -72,5 +73,5 @@ const mapDispatchToProps = {
   setUserProfileThunk
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProfileInfo)
+export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirectComponent)
 

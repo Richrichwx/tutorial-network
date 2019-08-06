@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
 import { Redirect } from 'react-router';
+import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
 
 
 const DialogsContainer = styled.div`
@@ -48,9 +49,7 @@ class Dialogs extends React.Component {
   };
 
   render() {
-    const {message,nameUser,isAuth} = this.props;
-    if(!isAuth) return <Redirect  to="/login" />
-
+    const {message,nameUser} = this.props;
     return (
       <DialogsContainer>
         {nameUser.nameUser.map((name,index) => {
@@ -79,6 +78,7 @@ class Dialogs extends React.Component {
     )
   }
 }
+let AuthRedirectComponent = WithAuthRedirect(Dialogs);
 
 const mapStateToProps = state => ({
   message: state.messages,
@@ -91,4 +91,4 @@ const mapDispatchToProps = {
   getUser
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dialogs)
+export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirectComponent)
