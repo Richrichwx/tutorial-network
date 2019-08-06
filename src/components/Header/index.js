@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
 import { setAuthDataThunk } from '../../store/auth/auth.action';
+import { compose } from 'redux';
 
 const HeaderContainer = styled.div`
   width: 1000px;
@@ -41,4 +42,5 @@ const mapDispatchToProps = {
   setAuthDataThunk
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default compose( connect(mapStateToProps, mapDispatchToProps)
+)(Header);

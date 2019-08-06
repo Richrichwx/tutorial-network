@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addPost } from '../../store/post/post.action';
+import { compose } from 'redux';
 
 const PostsContainer = styled.div`
   width: 800px;
@@ -68,4 +69,6 @@ const mapDispatchToProps = {
   addPost
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyPosts)
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps)
+)(MyPosts);
