@@ -5,6 +5,7 @@ import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
 import { Redirect } from 'react-router';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
+import { compose } from 'redux';
 
 
 const DialogsContainer = styled.div`
@@ -78,7 +79,6 @@ class Dialogs extends React.Component {
     )
   }
 }
-let AuthRedirectComponent = WithAuthRedirect(Dialogs);
 
 const mapStateToProps = state => ({
   message: state.messages,
@@ -91,4 +91,7 @@ const mapDispatchToProps = {
   getUser
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirectComponent)
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  WithAuthRedirect
+)(Dialogs);

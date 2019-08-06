@@ -5,6 +5,7 @@ import { setUserProfileThunk } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
 import { Redirect } from 'react-router';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
+import { compose } from 'redux';
 
 const Avatar = styled.img`
   width: 150px;
@@ -63,7 +64,7 @@ class ProfileInfo extends React.Component {
     )
   }
 }
-let AuthRedirectComponent = WithAuthRedirect(ProfileInfo);
+
 const mapStateToProps = state => ({
   profile: state.profile,
   isAuth: state.auth.isAuth
@@ -73,5 +74,8 @@ const mapDispatchToProps = {
   setUserProfileThunk
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthRedirectComponent)
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  WithAuthRedirect
+)(ProfileInfo);
 
