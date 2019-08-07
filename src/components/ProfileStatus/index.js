@@ -27,7 +27,7 @@ class ProfileStatus extends React.Component {
     return (
       <div>
         { !this.state.editMode ? (
-          <div onClick={ this.activationEdit }>{ this.props.status }</div>
+          <div onClick={ this.activationEdit }>{ this.props.status|| "Изменить статус" }</div>
         ) : (
           <input type="text" value={ this.state.status }
                  onBlur={ this.deactivationEdit }

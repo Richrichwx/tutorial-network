@@ -38,7 +38,7 @@ class ProfileInfo extends React.Component {
   componentDidMount() {
         let id = this.props.match;
         if(!id) {
-          id = 2;
+          id = 1364;
         }
     this.props.setUserProfileThunk(id);
       this.props.getStatusThunk(id)
