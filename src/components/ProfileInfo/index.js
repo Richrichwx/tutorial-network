@@ -6,6 +6,7 @@ import avatar from '../../assets/image.jpeg';
 import { Redirect } from 'react-router';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
 import { compose } from 'redux';
+import ProfileStatus from '../ProfileStatus';
 
 const Avatar = styled.img`
   width: 150px;
@@ -59,6 +60,7 @@ class ProfileInfo extends React.Component {
           <TextInfo>
             { this.props.profile.profile.lookingForAJobDescription }</TextInfo>
         </ProfileInfoCont>
+        <ProfileStatus />
       </ProfileContainer>
 
     )
@@ -76,6 +78,5 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
-  WithAuthRedirect
 )(ProfileInfo);
 
