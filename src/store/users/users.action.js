@@ -28,10 +28,10 @@ export const setTotalCount = (count) => ({
 export const getUsersThunk = (currentPage,pageSize) => {
   return (dispatch) => {
     getUsers(currentPage,pageSize)
-      .then(data => {
-        dispatch(setUsers(data.items));
+      .then(response => {
+        dispatch(setUsers(response.data.items));
         dispatch(setPages(currentPage));
-        dispatch(setTotalCount(data.totalCount));
+        dispatch(setTotalCount(response.data.totalCount));
       })
 
 }
@@ -41,8 +41,8 @@ export const getUsersThunk = (currentPage,pageSize) => {
 export const followUsersThunk = (id) => {
   return (dispatch) => {
     followUsers(id)
-      .then(data => {
-        if (data.resultCode === 0) {
+      .then(response => {
+        if (response.data.resultCode === 0) {
           dispatch(follow(id))
         }
       })
@@ -52,8 +52,8 @@ export const followUsersThunk = (id) => {
 export const unFollowUsersThunk = (id) => {
   return (dispatch) => {
     unFollowUsers(id)
-      .then(data => {
-        if (data.resultCode === 0) {
+      .then(response => {
+        if (response.data.resultCode === 0) {
           dispatch(unFollow(id))
         }
       })

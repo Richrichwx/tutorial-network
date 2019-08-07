@@ -14,13 +14,13 @@ export const setStatus = (status) => ({
 export const setUserProfileThunk = (id) => {
   return (dispatch) => {
     getProfile(id)
-      .then(data => {
-        dispatch(setUserProfile(data))
+      .then(response => {
+        dispatch(setUserProfile(response.data))
       })
   }
 };
 
-export const setStatusThunk = (id) => {
+export const getStatusThunk = (id) => {
   return (dispatch) => {
     getStatus(id)
       .then(response => {

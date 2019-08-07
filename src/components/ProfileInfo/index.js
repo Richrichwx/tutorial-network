@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { setStatusThunk, setUserProfileThunk, updateStatusThunk } from '../../store/profile/profile.action';
+import { getStatusThunk, setUserProfileThunk, updateStatusThunk } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
-import { Redirect } from 'react-router';
-import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
+
 import { compose } from 'redux';
 import ProfileStatus from '../ProfileStatus';
 
@@ -42,13 +41,10 @@ class ProfileInfo extends React.Component {
           id = 2;
         }
     this.props.setUserProfileThunk(id);
-      this.props.setStatusThunk(id)
-
+      this.props.getStatusThunk(id)
   }
 
   render() {
-    const {isAuth} = this.props;
-
     return (
       <ProfileContainer>
         { this.props.profile.profile.photos ? (
@@ -62,7 +58,7 @@ class ProfileInfo extends React.Component {
           <TextInfo>
             { this.props.profile.profile.lookingForAJobDescription }</TextInfo>
         </ProfileInfoCont>
-        <ProfileStatus status={this.props.status} updateStatusThunk={this.props.updateStatusThunk}/>
+        <ProfileStatus status={this.props.profile.status} updateStatusThunk={this.props.updateStatusThunk}/>
       </ProfileContainer>
 
     )
@@ -77,7 +73,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   setUserProfileThunk,
-  setStatusThunk,
+  getStatusThunk,
   updateStatusThunk
 };
 

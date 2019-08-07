@@ -12,9 +12,9 @@ export const setAuthData = (id, email, login) => ({
 export const setAuthDataThunk = (id, email, login) => {
   return (dispatch) => {
     getAuth(id, email, login)
-      .then(data => {
-        if (data.resultCode === 0) {
-          let { id, email, login } = data.data;
+      .then(response => {
+        if (response.data.resultCode === 0) {
+          let { id, email, login } = response.data.data;
           dispatch(setAuthData(id, email, login))
         }
       })

@@ -1,6 +1,4 @@
 import React from 'react';
-import { updateStatusThunk } from '../../store/profile/profile.action';
-
 
 class ProfileStatus extends React.Component {
   state = {
@@ -9,18 +7,18 @@ class ProfileStatus extends React.Component {
   };
   activationEdit = () => {
     this.setState({
-      editMode: true
+      editMode: true,
+      status:  this.props.status
     })
   };
 
   deactivationEdit = () => {
+    this.props.updateStatusThunk(this.state.status);
     this.setState({
       editMode: false
     });
-    this.props.updateStatusThunk(this.state.status)
   };
   onStatusChange = (e) => {
-    console.log(this.state.status)
     this.setState({
       status: e.currentTarget.value
     });
