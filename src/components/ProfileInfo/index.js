@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
-import { setUserProfileThunk } from '../../store/profile/profile.action';
+import { setStatusThunk, setUserProfileThunk, updateStatusThunk } from '../../store/profile/profile.action';
 import avatar from '../../assets/image.jpeg';
 import { Redirect } from 'react-router';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
@@ -41,7 +41,9 @@ class ProfileInfo extends React.Component {
         if(!id) {
           id = 2;
         }
-    this.props.setUserProfileThunk(id)
+    this.props.setUserProfileThunk(id);
+      this.props.setStatusThunk(id)
+
   }
 
   render() {
@@ -60,7 +62,7 @@ class ProfileInfo extends React.Component {
           <TextInfo>
             { this.props.profile.profile.lookingForAJobDescription }</TextInfo>
         </ProfileInfoCont>
-        <ProfileStatus />
+        <ProfileStatus status={this.props.status} updateStatusThunk={this.props.updateStatusThunk}/>
       </ProfileContainer>
 
     )
@@ -69,11 +71,14 @@ class ProfileInfo extends React.Component {
 
 const mapStateToProps = state => ({
   profile: state.profile,
-  isAuth: state.auth.isAuth
+  isAuth: state.auth.isAuth,
+  status: state.profile.status
 });
 
 const mapDispatchToProps = {
-  setUserProfileThunk
+  setUserProfileThunk,
+  setStatusThunk,
+  updateStatusThunk
 };
 
 export default compose(

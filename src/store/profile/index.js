@@ -1,5 +1,6 @@
 const initialState = {
-  profile: []
+  profile: [],
+  status: ''
 };
 
 export default function (state = initialState,action) {
@@ -8,6 +9,12 @@ export default function (state = initialState,action) {
       return {
         ...state,
         profile: action.profile,
+      };
+    }
+    case 'SET_STATUS': {
+      return {
+        ...state,
+        status: action.status,
       };
     }
     default:
