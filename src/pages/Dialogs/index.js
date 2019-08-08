@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
-import { Redirect } from 'react-router';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
 import { compose } from 'redux';
 

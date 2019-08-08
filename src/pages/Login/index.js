@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import LoginForm from '../../components/LoginForm';
 
 const MusicContainer = styled.div`
   width: 800px;
@@ -12,20 +13,7 @@ class Login extends React.Component {
     return (
       <MusicContainer>
         <h1>Login</h1>
-        <form>
-          <div>
-            <input type="text" placeholder="Login"/>
-          </div>
-          <div>
-            <input type="text" placeholder="Password"/>
-          </div>
-          <div>
-            <input type="checkbox"/>
-          </div>
-          <div>
-            <button>Login</button>
-          </div>
-        </form>
+        <LoginForm />
       </MusicContainer>
     )
   }
