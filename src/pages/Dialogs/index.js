@@ -5,6 +5,7 @@ import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
 import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
 import { compose } from 'redux';
+import { DialogsReduxForm } from '../../components/DialogsForm';
 
 
 const DialogsContainer = styled.div`
@@ -48,31 +49,34 @@ class Dialogs extends React.Component {
     window.navigate.push(`/${path}`)
   };
 
+  onSubmit = (formData) => {
+    console.log(formData)
+  };
+
   render() {
-    const {message,nameUser} = this.props;
+    const { message, nameUser } = this.props;
     return (
       <DialogsContainer>
-        {nameUser.nameUser.map((name,index) => {
-          return(
-            <div key={index}>
-              <a href="/#" onClick={(e) => this.navigateTo(e, `dialogs/${name.id}`)}>
-                {name.name}
+        { nameUser.nameUser.map((name, index) => {
+          return (
+            <div key={ index }>
+              <a href="/#" onClick={ (e) => this.navigateTo(e, `dialogs/${name.id}`) }>
+                { name.name }
               </a>
             </div>
           )
-        })}
-        <AddMessageItem>
-          <textarea onChange={ this.onChangeMessage } value={this.state.value}/>
-          <button onClick={ this.addMessages }>add message</button>
-        </AddMessageItem>
+        }) }
+        <>
+          <DialogsReduxForm onSubmit={ this.onSubmit }/>
+        </>
         <Items>
-          {message.message.map((item,index) => {
-            return(
-              <ItemMessage key={index}>
-                {item}
+          { message.message.map((item, index) => {
+            return (
+              <ItemMessage key={ index }>
+                { item }
               </ItemMessage>
             )
-          })}
+          }) }
         </Items>
       </DialogsContainer>
     )

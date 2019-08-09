@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addPost } from '../../store/post/post.action';
 import { compose } from 'redux';
+import { PostsReduxForm } from '../PostsForm';
 
 const PostsContainer = styled.div`
   width: 800px;
@@ -30,13 +31,8 @@ class MyPosts extends React.Component {
       value: e.target.value
     });
   };
-
-  addPosts = (e) => {
-    this.props.addPost(this.state.value);
-    console.log(this.props.post);
-    this.setState({
-      value: e.target.value
-    });
+  onSubmit = (formData) => {
+    console.log(formData)
   };
   render() {
     const { post } = this.props;
@@ -44,8 +40,7 @@ class MyPosts extends React.Component {
       <PostsContainer>
           My post
           <AddPostS>
-            <Textarea value={ this.state.value } onChange={ this.onChangePost }/>
-            <Add onClick={ this.addPosts }>Add</Add>
+            <PostsReduxForm onSubmit={this.onSubmit }/>
           </AddPostS>
           <div>
             {post.post.map((item,index) => {

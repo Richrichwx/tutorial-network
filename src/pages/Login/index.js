@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Field, reduxForm } from 'redux-form';
-
+import { LoginReduxForm } from '../../components/LoginForm';
 
 const MusicContainer = styled.div`
   width: 800px;
@@ -9,31 +8,6 @@ const MusicContainer = styled.div`
   padding: 20px 0;
 `;
 
-const LoginForm = (props) => {
-    return (
-      <div>
-        <form onSubmit={props.handleSubmit}>
-          <div>
-            <Field name="login" placeholder="Login" component="input"/>
-          </div>
-          <div>
-            <Field name="password" placeholder="Password" component="input"/>
-          </div>
-          <div>
-            <Field name="remember" type="checkbox" component="input"/> Remember me
-          </div>
-          <div>
-            <button>Login</button>
-          </div>
-        </form>
-      </div>
-    )
-};
-
-const LoginReduxForm =  reduxForm({
-  // a unique name for the form
-  form: 'login'
-})(LoginForm);
 
 const Login = () => {
   const onSubmit = (formData) => {
@@ -42,7 +16,7 @@ const Login = () => {
     return (
       <MusicContainer>
         <h1>Login</h1>
-        <LoginReduxForm onSubmit={onSubmit}/>
+        <LoginReduxForm onSubmit={onSubmit} />
       </MusicContainer>
     )
 };

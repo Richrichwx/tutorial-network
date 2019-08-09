@@ -1,4 +1,4 @@
-import { getAuth } from './auth.api';
+import { getAuth, LoginAuth } from './auth.api';
 
 export const setAuthData = (id, email, login) => ({
   type: 'SET_AUTH_DATA',
@@ -20,3 +20,4 @@ export const setAuthDataThunk = (id, email, login) => {
       })
   }
 };
+
