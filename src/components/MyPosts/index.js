@@ -31,8 +31,17 @@ class MyPosts extends React.Component {
       value: e.target.value
     });
   };
+
+  addPosts = (e) => {
+    this.props.addPost(this.state.value);
+    console.log(this.props.post);
+    this.setState({
+      value: e.target.value
+    });
+  };
   onSubmit = (formData) => {
-    console.log(formData)
+    console.log(formData.post)
+    this.props.addPost(formData.post)
   };
   render() {
     const { post } = this.props;

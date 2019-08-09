@@ -4,7 +4,7 @@ import { reduxForm,Field } from 'redux-form';
 const PostsForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
-      <Field name="posts" placeholder="введите пост" component="input"/>
+      <Field name="post" placeholder="введите пост" component="textarea"/>
       <button>Add</button>
     </form>
   )
@@ -12,5 +12,5 @@ const PostsForm = (props) => {
 
 
 export const PostsReduxForm = reduxForm({
-  form: 'posts'
+  form: 'post'
 })(PostsForm);

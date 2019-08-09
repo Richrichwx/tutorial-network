@@ -6,7 +6,7 @@ const DialogsForm = (props) => {
   return (
     <div>
       <form onSubmit={props.handleSubmit}>
-          <Field name="message" placeholder="ввеедите сообщениие" component="input" />
+          <Field name="message" placeholder="ввеедите сообщениие" component="textarea" />
           <button>add message</button>
         </form>
     </div>

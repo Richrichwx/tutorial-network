@@ -50,7 +50,8 @@ class Dialogs extends React.Component {
   };
 
   onSubmit = (formData) => {
-    console.log(formData)
+    console.log(formData.message)
+    this.props.addMessage(formData.message)
   };
 
   render() {
