@@ -26,20 +26,7 @@ class MyPosts extends React.Component {
     value: ''
   };
 
-  onChangePost = (e) => {
-    this.setState({
-      value: e.target.value
-    });
-  };
-
-  addPosts = (e) => {
-    this.props.addPost(this.state.value);
-    console.log(this.props.post);
-    this.setState({
-      value: e.target.value
-    });
-  };
-  onSubmit = (formData) => {
+  addNewPost = (formData) => {
     console.log(formData.post)
     this.props.addPost(formData.post)
   };
@@ -49,7 +36,7 @@ class MyPosts extends React.Component {
       <PostsContainer>
           My post
           <AddPostS>
-            <PostsReduxForm onSubmit={this.onSubmit }/>
+            <PostsReduxForm onSubmit={this.addNewPost }/>
           </AddPostS>
           <div>
             {post.post.map((item,index) => {

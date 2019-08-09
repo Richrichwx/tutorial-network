@@ -31,25 +31,13 @@ class Dialogs extends React.Component {
   state = {
     value: ''
   };
-  onChangeMessage = (e) => {
-    this.setState({
-      value: e.target.value
-    });
-  };
-
-  addMessages = (e) => {
-    this.props.addMessage(this.state.value);
-    this.setState({
-      value: e.target.value
-    });
-  };
 
   navigateTo = (e, path) => {
     e.preventDefault();
     window.navigate.push(`/${path}`)
   };
 
-  onSubmit = (formData) => {
+  newMesssage = (formData) => {
     console.log(formData.message)
     this.props.addMessage(formData.message)
   };
@@ -68,7 +56,7 @@ class Dialogs extends React.Component {
           )
         }) }
         <>
-          <DialogsReduxForm onSubmit={ this.onSubmit }/>
+          <DialogsReduxForm onSubmit={ this.newMesssage }/>
         </>
         <Items>
           { message.message.map((item, index) => {
