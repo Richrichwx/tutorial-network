@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Field, reduxForm } from 'redux-form';
 import { maxLenghtThunk, required } from '../../utilits/Validation';
+import { Input } from '../FormControls';
 
 const maxLenght = maxLenghtThunk(10);
 
@@ -10,7 +10,7 @@ const LoginForm = (props) => {
     <div>
       <form onSubmit={ props.handleSubmit }>
         <div>
-          <Field name="login" placeholder="Login" component="input"
+          <Field name="login" placeholder="Login" component={Input}
                  validate={ [required, maxLenght] }/>
         </div>
         <div>

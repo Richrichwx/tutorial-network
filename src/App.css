@@ -38,3 +38,15 @@
     transform: rotate(360deg);
   }
 }
+
+.formControl {
+
+  }
+
+.formControl span{
+  color:  red;
+}
+
+.error input{
+  border: 2px solid red;
+}
