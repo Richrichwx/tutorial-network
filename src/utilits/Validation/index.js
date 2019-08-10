@@ -5,9 +5,9 @@ export const required = (value) => {
   return 'error';
 };
 
-export const maxLenghtThunk = (maxLength) => (value) => {
+export const maxLengthThunk = (maxLength) => (value) => {
   if(value.length > maxLength) {
-    return `mmax length ${maxLength} simbols`;
+    return `max length ${maxLength} simbols`;
   }
   return undefined;
 };
