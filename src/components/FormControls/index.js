@@ -13,7 +13,7 @@ export const Input = ({input, meta, ...props}) => {
           <input type="text" {...input}{...props}/>
         </div>
       )}
-      {hasError && <span>some error</span>}
+      {hasError && <div className='errorText'>some error</div>}
       </>
   )
 };
