@@ -3,18 +3,19 @@ import { Field, reduxForm } from 'redux-form';
 import { maxLengthThunk, required } from '../../utilits/Validation';
 import { Input } from '../FormControls';
 
-const maxLength = maxLengthThunk(10);
+const maxLength = maxLengthThunk(30);
 
 const LoginForm = (props) => {
   return (
     <div>
       <form onSubmit={ props.handleSubmit }>
         <div>
-          <Field name="login" placeholder="Login" component={Input}
+          <Field name="email" placeholder="Login" component={Input}
                  validate={ [required, maxLength] }/>
         </div>
         <div>
           <Field name="password" placeholder="Password" component={Input}
+                 type="password"
                  validate={[required, maxLength]}/>
         </div>
         <div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { LoginReduxForm } from '../../components/LoginForm';
+import { connect } from 'react-redux';
+import { loginThunk } from '../../store/auth/auth.action';
 
 const MusicContainer = styled.div`
   width: 800px;
@@ -9,9 +11,10 @@ const MusicContainer = styled.div`
 `;
 
 
-const Login = () => {
+const Login = (props) => {
   const onSubmit = (formData) => {
     console.log(formData)
+    props.loginThunk(formData.email,formData.password,formData.rememberMe)
   };
     return (
       <MusicContainer>
@@ -21,4 +24,4 @@ const Login = () => {
     )
 };
 
-export default Login;
+export default connect(null,{loginThunk})(Login);
