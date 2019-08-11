@@ -15,11 +15,12 @@ const MusicContainer = styled.div`
 const Login = (props) => {
   const onSubmit = (formData) => {
     console.log(formData)
-    props.loginThunk(formData.email,formData.password,formData.rememberMe)
+    props.loginThunk(formData.email,formData.password,formData.rememberMe);
+    console.log(props.isAuth)
   };
   if(props.isAuth) {
     return (
-      <Redirect to="/profile"/>
+      <Redirect to={"/profile"}/>
     )
   }
     return (

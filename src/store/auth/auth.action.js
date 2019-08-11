@@ -11,13 +11,13 @@ export const setAuthData = (id, email, login,isAuth) => ({
   },
 });
 
-export const setAuthDataThunk = (id, email, login) => {
+export const setAuthDataThunk = () => {
   return (dispatch) => {
-    getAuth(id, email, login)
+    getAuth()
       .then(response => {
         if (response.data.resultCode === 0) {
           let { id, email, login } = response.data.data;
-          dispatch(setAuthData(id, email, login,true))
+          dispatch(setAuthData(id, email, login, true))
         }
       })
   }
@@ -28,7 +28,7 @@ export const loginThunk = (email, password, rememberMe) => {
     login( email, password,rememberMe )
       .then(response => {
         if (response.data.resultCode === 0) {
-          dispatch(setAuthData())
+          dispatch(setAuthDataThunk())
         } else {
           let messages = response.data.messages.length > 0 ? response.data.messages[0] : 'some error';
           dispatch(stopSubmit("login", {
