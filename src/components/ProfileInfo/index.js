@@ -38,7 +38,7 @@ class ProfileInfo extends React.Component {
   componentDidMount() {
         let id = this.props.match;
         if(!id) {
-          id = 1364;
+          id = this.props.authUserId;
         }
     this.props.setUserProfileThunk(id);
       this.props.getStatusThunk(id)
@@ -68,7 +68,8 @@ class ProfileInfo extends React.Component {
 const mapStateToProps = state => ({
   profile: state.profile,
   isAuth: state.auth.isAuth,
-  status: state.profile.status
+  status: state.profile.status,
+  authUserId: state.auth.id,
 });
 
 const mapDispatchToProps = {
