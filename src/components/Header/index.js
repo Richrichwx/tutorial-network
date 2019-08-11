@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
-import { setAuthDataThunk } from '../../store/auth/auth.action';
+import { logOutThunk, setAuthDataThunk } from '../../store/auth/auth.action';
 import { compose } from 'redux';
 
 const HeaderContainer = styled.div`
@@ -21,10 +21,18 @@ class Header extends React.Component {
     e.preventDefault();
     window.navigate.push(`/${path}`)
   };
-  render() {
+  logOutButton = () => {
+    this.props.logOutThunk()
+  };
+   render() {
     return (
       <HeaderContainer>
-        {this.props.isAuth ? this.props.login :
+        {this.props.isAuth ?
+          <div>
+            {this.props.login}
+            <button onClick={this.logOutButton}>Logout</button>
+          </div>
+          :
           <a href="/login" onClick={(e) => this.navigateTo(e, `login`)}>
             Login
           </a>
@@ -39,7 +47,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  setAuthDataThunk
+  setAuthDataThunk,
+  logOutThunk
 };
 
 export default compose( connect(mapStateToProps, mapDispatchToProps)

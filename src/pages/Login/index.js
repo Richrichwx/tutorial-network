@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { LoginReduxForm } from '../../components/LoginForm';
 import { connect } from 'react-redux';
 import { loginThunk } from '../../store/auth/auth.action';
+import { Redirect } from 'react-router';
 
 const MusicContainer = styled.div`
   width: 800px;
@@ -16,6 +17,11 @@ const Login = (props) => {
     console.log(formData)
     props.loginThunk(formData.email,formData.password,formData.rememberMe)
   };
+  if(props.isAuth) {
+    return (
+      <Redirect to="/profile"/>
+    )
+  }
     return (
       <MusicContainer>
         <h1>Login</h1>
@@ -23,5 +29,8 @@ const Login = (props) => {
       </MusicContainer>
     )
 };
+const mapStateToProps = state => ({
+  isAuth: state.auth.isAuth
+});
 
-export default connect(null,{loginThunk})(Login);
+export default connect(mapStateToProps,{loginThunk})(Login);
