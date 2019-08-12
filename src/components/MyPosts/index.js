@@ -20,17 +20,35 @@ const Add = styled.button`
 
 const A = styled.div`
 `;
-
+const users = [1,2,3,4,5];
+const  user = 0;
+const counts = 100;
 class MyPosts extends React.Component {
   state = {
-    value: ''
+    value: '',
+    isLike: false,
+    count: counts
+  };
+
+  componentDidMount() {
+    let a = users.find((value) => value === user);
+    this.setState({
+      isLike: a ? true : false,
+    })
+  }
+  likeButton = () => {
+      this.setState({
+        isLike: !this.state.isLike,
+        count: this.state.isLike? counts  : counts + 1
+      });
+    console.log(this.state.count)
   };
 
   addNewPost = (formData) => {
-    console.log(formData.post)
     this.props.addPost(formData.post)
   };
   render() {
+    console.log(this.state.isLike)
     const { post } = this.props;
     return (
       <PostsContainer>
@@ -47,13 +65,24 @@ class MyPosts extends React.Component {
               )
             })}
           </div>
+        <>
+          {this.state.isLike ? (
+            <button onClick={this.likeButton}> Unlike
+            </button>
+          ) : (
+            <button onClick={this.likeButton}> Like
+            </button>
+          )}
+          <div>{this.state.count}</div>
+        </>
       </PostsContainer>
     )
   }
 }
 
 const mapStateToProps = state => ({
-  post: state.post
+  post: state.post,
+  userId: state.auth.id
 });
 
 const mapDispatchToProps = {
