@@ -13,9 +13,6 @@ const HeaderContainer = styled.div`
 
 class Header extends React.Component {
 
-  componentDidMount() {
-    this.props.setAuthDataThunk()
-  }
 
   navigateTo = (e, path) => {
     e.preventDefault();

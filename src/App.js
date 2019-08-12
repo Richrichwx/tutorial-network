@@ -3,17 +3,29 @@ import './App.css';
 import Header from './components/Header/index';
 import SideBar from './components/Sidebar/index';
 import RouterWrapper from './containers/RouterWrapper';
+import { setAuthDataThunk } from './store/auth/auth.action';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <div className="App-container">
-        <SideBar />
-        <RouterWrapper />
+class App extends React.Component {
+  componentDidMount() {
+    this.props.setAuthDataThunk()
+  }
+  render() {
+    return (
+      <div className="App">
+        <Header/>
+        <div className="App-container">
+          <SideBar/>
+          <RouterWrapper/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default App;
+
+const mapDispatchToProps = {
+  setAuthDataThunk,
+};
+
+export default connect(null,mapDispatchToProps)(App);
