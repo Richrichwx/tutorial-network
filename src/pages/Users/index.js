@@ -8,6 +8,7 @@ import {
   setPages,
   unFollowUsersThunk
 } from '../../store/users/users.action';
+import { getCurrentPage, getPageSize, getTotalCount, getUsers } from '../../store/users/users.selectors';
 //we export everything there
 
 const UsersContainer = styled.div`
@@ -60,7 +61,7 @@ class Users extends React.Component {
             )
           }) }
         </div>
-        { users.users.map((user) => {
+        { users.map((user) => {
           return (
             <div key={ user.id }>
               <span>
@@ -100,10 +101,10 @@ class Users extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  users: state.users,
-  pageSize: state.users.pageSize,
-  totalCountUsers: state.users.totalCountUsers,
-  currentPage: state.users.currentPage,
+  users: getUsers(state),
+  pageSize: getPageSize(state),
+  totalCountUsers: getTotalCount(state),
+  currentPage: getCurrentPage(state),
 });
 
 const mapDispatchToProps = {

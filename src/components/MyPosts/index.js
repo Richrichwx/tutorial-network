@@ -12,12 +12,6 @@ const PostsContainer = styled.div`
 const AddPostS = styled.div`
 `;
 
-const Textarea = styled.textarea`
-`;
-
-const Add = styled.button`
-`;
-
 const A = styled.div`
 `;
 const users = [1,2,3,4,5];
