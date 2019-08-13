@@ -5,12 +5,16 @@ import SideBar from './components/Sidebar/index';
 import RouterWrapper from './containers/RouterWrapper';
 import { setAuthDataThunk } from './store/auth/auth.action';
 import { connect } from 'react-redux';
+import { setInitializationthunk } from './store/app/app.action';
 
 class App extends React.Component {
   componentDidMount() {
-    this.props.setAuthDataThunk()
+    this.props.setInitializationthunk()
   }
   render() {
+    if(!this.props.initialization) {
+      return ( 'aaaaa')
+    }
     return (
       <div className="App">
         <Header/>
@@ -23,9 +27,12 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  initialization: state.app.initialization
+});
 
 const mapDispatchToProps = {
-  setAuthDataThunk,
+  setInitializationthunk,
 };
 
-export default connect(null,mapDispatchToProps)(App);
+export default connect(mapStateToProps,mapDispatchToProps)(App);

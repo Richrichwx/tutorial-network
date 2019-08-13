@@ -10,7 +10,7 @@ function MainRouteHOC({ location, component: Component, title, description, isMa
     return (
       <React.Fragment>
         <div className='container'>
-          <Component match={match} {...rest} />
+          <Component match={match} {...rest} history={history}/>
         </div>
       </React.Fragment>
     )

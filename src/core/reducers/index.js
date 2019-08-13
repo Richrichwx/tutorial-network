@@ -5,7 +5,8 @@ import nameDialogs from '../../store/nameDialogs';
 import users from '../../store/users';
 import profile from '../../store/profile';
 import auth from '../../store/auth';
-import { reducer as formReducer } from 'redux-form'
+import { reducer as formReducer } from 'redux-form';
+import app from '../../store/app';
 
 export default combineReducers({
   post,
@@ -14,5 +15,6 @@ export default combineReducers({
   users,
   profile,
   auth,
-  form: formReducer
+  form: formReducer,
+  app
 })

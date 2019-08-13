@@ -13,7 +13,7 @@ export const setAuthData = (id, email, login,isAuth) => ({
 
 export const setAuthDataThunk = () => {
   return (dispatch) => {
-    getAuth()
+    return getAuth()
       .then(response => {
         if (response.data.resultCode === 0) {
           let { id, email, login } = response.data.data;

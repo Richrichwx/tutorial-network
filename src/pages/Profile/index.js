@@ -26,7 +26,7 @@ class Profile extends React.Component {
       <ProfileContainer>
         <ProfileContent>
           <ProfileContentTop>
-            <ProfileInfo  match={this.props.match.params.id}/>
+            <ProfileInfo  match={this.props.match} history={this.props.history}/>
           </ProfileContentTop>
           <ProfileContentBottom>
             <MyPosts/>

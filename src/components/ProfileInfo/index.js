@@ -36,9 +36,12 @@ const TextInfo = styled.p`
 class ProfileInfo extends React.Component {
 
   componentDidMount() {
-        let id = this.props.match;
+        let id = this.props.match.params.id;
         if(!id) {
-          id = 1364;
+          id = this.props.authUserId;
+          if(!id) {
+            this.props.history.push('/login')
+          }
         }
     this.props.setUserProfileThunk(id);
       this.props.getStatusThunk(id)
