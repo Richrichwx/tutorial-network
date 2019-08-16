@@ -8,7 +8,12 @@ import {
   setPages,
   unFollowUsersThunk
 } from '../../store/users/users.action';
-import { getCurrentPage, getPageSize, getTotalCount, getUsers } from '../../store/users/users.selectors';
+import {
+  getCurrentPage,
+  getPageSize,
+  getTotalCount,
+  getUsers,
+} from '../../store/users/users.selectors';
 //we export everything there
 
 const UsersContainer = styled.div`
