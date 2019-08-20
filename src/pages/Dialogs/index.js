@@ -32,10 +32,6 @@ class Dialogs extends React.Component {
     value: ''
   };
 
-  navigateTo = (e, path) => {
-    e.preventDefault();
-    window.navigate.push(`/${path}`)
-  };
 
   newMesssage = (formData) => {
     console.log(formData.message)

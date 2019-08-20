@@ -1,51 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class ProfileStatus extends React.Component {
-  state = {
-    editMode: false,
-    status: this.props.status
+const ProfileStatus =(props) =>  {
+  const [editMode,setEditMode] = useState(false);
+  const [status,setStatus] = useState(props.status);
+  const activationEdit = () => {
+    setEditMode(true);
   };
-  activationEdit = () => {
-    this.setState({
-      editMode: true,
-    })
+  const deactivationEdit = () => {
+    setEditMode(false)
   };
-
-  deactivationEdit = () => {
-    this.props.updateStatusThunk(this.state.status);
-    this.setState({
-      editMode: false
-    });
+  const  onStatusChange = (e) => {
+    setStatus(e.currentTarget.value);
+    props.updateStatusThunk(status)
   };
-  onStatusChange = (e) => {
-    this.setState({
-      status: e.currentTarget.value
-    });
-  };
-
-  componentDidUpdate(prevProps, prevState) {
-    if(prevProps.status !== this.props.status) {
-      this.setState({
-        status:  this.props.status
-      })
-    }
-    console.log('componentDidUpdate')
-  }
-  render() {
-    console.log('rennder')
     return (
       <div>
-        { !this.state.editMode ? (
-          <div onClick={ this.activationEdit }>{ this.props.status|| "Изменить статус" }</div>
-        ) : (
-          <input type="text" value={ this.state.status }
-                 onBlur={ this.deactivationEdit }
+        {editMode ? (
+          <input type="text" value={status }
+                 onBlur={ deactivationEdit }
                  autoFocus={ true }
-          onChange={this.onStatusChange}/>
+                 onChange={onStatusChange}/>
+        ) : (
+          <div onClick={activationEdit  }>{ props.status|| "Изменить статус" }</div>
         ) }
       </div>
     )
   }
-}
 
 export default ProfileStatus;

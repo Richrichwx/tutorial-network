@@ -6,7 +6,7 @@ import Login from '../pages/Login';
 const Routes = [
   {
     path: '/profile',
-    to: '/',
+    to: '/profile',
     title: 'Profile',
     description: 'profile',
     component: Profile,
