@@ -39,11 +39,6 @@ class Users extends React.Component {
     console.log(str)
   };
 
-  navigateTo = (e, path) => {
-    e.preventDefault();
-    window.navigate.push(`/${path}`)
-  };
-
   render() {
     const { users, pageSize, totalCountUsers, currentPage } = this.props;
     let pagesCount = Math.ceil(totalCountUsers / pageSize);
@@ -71,7 +66,7 @@ class Users extends React.Component {
             <div key={ user.id }>
               <span>
                 <div>
-                    <a href="/profile" onClick={ (e) => this.navigateTo(e, `profile/${user.id}`) }>
+                    <a href={"/profile/" + user.id}>
                       <Img src={ user.photos.small !== null ? user.photos.small : avatar } alt=""/>
                      </a>
                 </div>

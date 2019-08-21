@@ -32,7 +32,6 @@ class Dialogs extends React.Component {
     value: ''
   };
 
-
   newMesssage = (formData) => {
     console.log(formData.message)
     this.props.addMessage(formData.message)
@@ -45,7 +44,7 @@ class Dialogs extends React.Component {
         { nameUser.nameUser.map((name, index) => {
           return (
             <div key={ index }>
-              <a href="/#" onClick={ (e) => this.navigateTo(e, `dialogs/${name.id}`) }>
+              <a href="/#">
                 { name.name }
               </a>
             </div>

@@ -3,7 +3,7 @@ const initialState = {
   pageSize: 10,
   totalCountUsers: 0,
   currentPage: 1,
-  followingProgress: false
+  followed: false
 };
 export default function (state = initialState, action) {
   switch (action.type) {
