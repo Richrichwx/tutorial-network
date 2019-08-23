@@ -21,9 +21,6 @@ const DialogsContainer = styled.div`
 const ItemMessage = styled.div`
 `;
 
-const AddMessageItem = styled.div`
-`;
-
 const Items = styled.div`
 `;
 
@@ -33,7 +30,6 @@ class Dialogs extends React.Component {
   };
 
   newMesssage = (formData) => {
-    console.log(formData.message)
     this.props.addMessage(formData.message)
   };
 
