@@ -1,14 +1,17 @@
-import http from '../../core/api';
+import http from '../../core/http';
 
-export const getAuth = () => {
-  return http.get(`auth/me`)
-};
-export const login = (email, password, rememberMe = false) => {
-  return http.post(`auth/login`, {
-    email, password, rememberMe
-  })
+const api = {
+  getAuth: () => {
+    return http.get(`auth/me`)
+  },
+  login: (email, password, rememberMe = false) => {
+    return http.post(`auth/login`, {
+      email, password, rememberMe
+    })
+  },
+  LogOut: () => {
+    return http.delete(`auth/login`)
+  }
 };
 
-export const LogOut = () => {
-  return http.delete(`auth/login`)
-};
+export default api;

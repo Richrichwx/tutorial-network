@@ -1,5 +1,4 @@
-
-import { getProfile, getStatus, updateStatus } from './profile.api';
+import api from './profile.api';
 
 export const setUserProfile = (profile) => ({
   type: 'SET_USER_PROFILE',
@@ -13,7 +12,7 @@ export const setStatus = (status) => ({
 
 export const setUserProfileThunk = (id) => {
   return (dispatch) => {
-    getProfile(id)
+    api.getProfile(id)
       .then(response => {
         dispatch(setUserProfile(response.data))
       })
@@ -22,7 +21,7 @@ export const setUserProfileThunk = (id) => {
 
 export const getStatusThunk = (id) => {
   return (dispatch) => {
-    getStatus(id)
+    api.getStatus(id)
       .then(response => {
         dispatch(setStatus(response.data))
       })
@@ -31,7 +30,7 @@ export const getStatusThunk = (id) => {
 
 export const updateStatusThunk = (status) => {
   return (dispatch) => {
-    updateStatus(status)
+    api.updateStatus(status)
       .then(response => {
         if(response.data.resultCode === 0) {
           dispatch(setStatus(status))

@@ -1,4 +1,4 @@
-import { setAuthData, setAuthDataThunk } from '../auth/auth.action';
+import { setAuthDataThunk } from '../auth/auth.action';
 
 export const setInitialization = () => ({
   type: 'SET_INITIALIZATION',

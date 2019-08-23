@@ -1,5 +1,6 @@
 import { getAuth, login, LogOut } from './auth.api';
 import { stopSubmit } from 'redux-form'
+import api from './auth.api';
 
 export const setAuthData = (id, email, login,isAuth) => ({
   type: 'SET_AUTH_DATA',
@@ -13,7 +14,7 @@ export const setAuthData = (id, email, login,isAuth) => ({
 
 export const setAuthDataThunk = () => {
   return (dispatch) => {
-    return getAuth()
+    return api.getAuth()
       .then(response => {
         if (response.data.resultCode === 0) {
           let { id, email, login } = response.data.data;
@@ -25,7 +26,7 @@ export const setAuthDataThunk = () => {
 
 export const loginThunk = (email, password, rememberMe) => {
   return (dispatch) => {
-    login( email, password,rememberMe )
+    api.login( email, password,rememberMe )
       .then(response => {
         if (response.data.resultCode === 0) {
           dispatch(setAuthDataThunk())
@@ -41,7 +42,7 @@ export const loginThunk = (email, password, rememberMe) => {
 
 export const logOutThunk = () => {
   return (dispatch) => {
-    LogOut()
+    api.LogOut()
       .then(response => {
         if (response.data.resultCode === 0) {
           dispatch(setAuthData(null,null,null,false))

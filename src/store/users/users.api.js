@@ -1,13 +1,15 @@
-import http from '../../core/api'
+import http from '../../core/http'
 
-export const getUsers = (currentPage, pageSize) => {
-  return http.get(`users?page=${currentPage}&count=${pageSize}`)
+const api = {
+  getUsers:(currentPage, pageSize) => {
+    return http.get(`users?page=${currentPage}&count=${pageSize}`)
+  },
+  followUsers: (id) => {
+    return http.post(`follow/` + id)
+  },
+  unFollowUsers: (id) => {
+    return http.delete(`follow/` + id)
+  }
 };
 
-export const followUsers = (id) => {
-  return http.post(`follow/` + id)
-};
-
-export const unFollowUsers = (id) => {
-  return http.delete(`follow/` + id)
-};
+export default api;

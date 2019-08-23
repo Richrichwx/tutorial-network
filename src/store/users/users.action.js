@@ -1,4 +1,4 @@
-import { followUsers, getUsers, unFollowUsers } from './users.api';
+import api from './users.api';
 
 export const follow = (userId) => ({
   type: 'FOLLOW',
@@ -27,7 +27,7 @@ export const setTotalCount = (count) => ({
 
 export const getUsersThunk = (currentPage,pageSize) => {
   return (dispatch) => {
-    getUsers(currentPage,pageSize)
+    api.getUsers(currentPage,pageSize)
       .then(response => {
         dispatch(setUsers(response.data.items));
         dispatch(setPages(currentPage));
@@ -40,7 +40,7 @@ export const getUsersThunk = (currentPage,pageSize) => {
 
 export const followUsersThunk = (id) => {
   return (dispatch) => {
-    followUsers(id)
+    api.followUsers(id)
       .then(response => {
         if (response.data.resultCode === 0) {
           dispatch(follow(id))
@@ -51,7 +51,7 @@ export const followUsersThunk = (id) => {
 
 export const unFollowUsersThunk = (id) => {
   return (dispatch) => {
-    unFollowUsers(id)
+    api.unFollowUsers(id)
       .then(response => {
         if (response.data.resultCode === 0) {
           dispatch(unFollow(id))

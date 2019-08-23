@@ -1,15 +1,17 @@
-import http from '../../core/api';
+import http from '../../core/http';
 
-export const getProfile = (id) => {
-  return  http.get(`profile/` + id)
+const api = {
+  getProfile:(id) => {
+    return  http.get(`profile/` + id)
+  },
+  getStatus: (id) => {
+    return  http.get(`profile/status/` + id)
+  },
+  updateStatus:(status) => {
+    return  http.put(`profile/status`, {
+      status: status
+    })
+  }
 };
 
-export const getStatus = (id) => {
-  return  http.get(`profile/status/` + id)
-};
-
-export const updateStatus = (status) => {
-  return  http.put(`profile/status`, {
-    status: status
-  })
-};
+export default api;
