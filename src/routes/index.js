@@ -27,7 +27,7 @@ const Routes = [
   },
   {
     path: '/dialogs/:id',
-    to: '/dialogs',
+    to: '/dialogs/:id',
     title: 'dialogs',
     description: '',
     component: Dialogs,
