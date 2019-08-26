@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addMessage } from '../../store/messages/messages.action';
 import { getUser } from '../../store/nameDialogs/dialogs.action';
-import { WithAuthRedirect } from '../../noc/AuthRedirectWrapper';
+import { WithAuthRedirect } from '../../hoc/AuthRedirectWrapper';
 import { compose } from 'redux';
-import { DialogsReduxForm } from '../../components/DialogsForm';
+import { DialogsReduxForm } from '../../components/forms/DialogsForm';
 
 
 const DialogsContainer = styled.div`

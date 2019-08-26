@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { maxLengthThunk, required } from '../../utilits/Validation';
-import { Input } from '../FormControls';
+import { maxLengthThunk, required } from '../../../utilits/Validation/index';
+import { Input } from '../../FormControls/index';
 
 const maxLength = maxLengthThunk(30);
 

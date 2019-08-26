@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LoginReduxForm } from '../../components/LoginForm';
+import { LoginReduxForm } from '../../components/forms/LoginForm';
 import { connect } from 'react-redux';
 import { loginThunk } from '../../store/auth/auth.action';
 import { Redirect } from 'react-router';

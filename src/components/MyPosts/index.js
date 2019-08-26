@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { addPost } from '../../store/post/post.action';
 import { compose } from 'redux';
-import { PostsReduxForm } from '../PostsForm';
+import { PostsReduxForm } from '../forms/PostsForm';
 
 const PostsContainer = styled.div`
   width: 800px;

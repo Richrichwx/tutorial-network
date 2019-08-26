@@ -11,9 +11,11 @@ const ProfileStatus =(props) =>  {
   const activationEdit = () => {
     setEditMode(true);
   };
+
   const deactivationEdit = () => {
     setEditMode(false)
   };
+
   const  onStatusChange = (e) => {
     setStatus(e.currentTarget.value);
     props.updateStatusThunk(status)
@@ -30,6 +32,6 @@ const ProfileStatus =(props) =>  {
         ) }
       </div>
     )
-  }
+  };
 
 export default ProfileStatus;
