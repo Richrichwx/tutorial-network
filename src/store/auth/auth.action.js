@@ -1,4 +1,3 @@
-import { getAuth, login, LogOut } from './auth.api';
 import { stopSubmit } from 'redux-form'
 import api from './auth.api';
 
