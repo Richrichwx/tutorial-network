@@ -25,37 +25,23 @@ export const setTotalCount = (count) => ({
   count
 });
 
-export const getUsersThunk = (currentPage,pageSize) => {
-  return (dispatch) => {
-    api.getUsers(currentPage,pageSize)
-      .then(response => {
-        dispatch(setUsers(response.data.items));
-        dispatch(setPages(currentPage));
-        dispatch(setTotalCount(response.data.totalCount));
-      })
-
-}
-
+export const getUsersThunk = (currentPage, pageSize) => async (dispatch) => {
+  const { data: { data } } = await  api.getUsers(currentPage, pageSize);
+  dispatch(setUsers(data.items));
+  dispatch(setPages(currentPage));
+  dispatch(setTotalCount(data.totalCount));
 };
 
-export const followUsersThunk = (id) => {
-  return (dispatch) => {
-    api.followUsers(id)
-      .then(response => {
-        if (response.data.resultCode === 0) {
-          dispatch(follow(id))
-        }
-      })
+export const followUsersThunk = (id) => async (dispatch) => {
+  const { data: { data } } = await api.followUsers(id);
+  if (data.resultCode === 0) {
+    dispatch(follow(id))
   }
 };
 
-export const unFollowUsersThunk = (id) => {
-  return (dispatch) => {
-    api.unFollowUsers(id)
-      .then(response => {
-        if (response.data.resultCode === 0) {
-          dispatch(unFollow(id))
-        }
-      })
+export const unFollowUsersThunk = (id) => async (dispatch) => {
+  const { data: { data } } = await api.unFollowUsers(id);
+  if (data.resultCode === 0) {
+    dispatch(unFollow(id))
   }
 };

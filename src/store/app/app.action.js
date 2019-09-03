@@ -4,11 +4,9 @@ export const setInitialization = () => ({
   type: 'SET_INITIALIZATION',
 });
 
-export const setInitializationthunk = () => {
-  return (dispatch) => {
+export const setInitializationthunk = () => async (dispatch) => {
     let promise = dispatch(setAuthDataThunk());
     promise.then(() => {
       dispatch(setInitialization())
     })
-  }
 };

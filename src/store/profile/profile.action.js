@@ -10,32 +10,20 @@ export const setStatus = (status) => ({
   status
 });
 
-export const setUserProfileThunk = (id) => {
-  return (dispatch) => {
-    api.getProfile(id)
-      .then(response => {
-        dispatch(setUserProfile(response.data))
-      })
-  }
+export const setUserProfileThunk = (id) => async (dispatch) => {
+  const { data: { data } } = await  api.getProfile(id);
+  dispatch(setUserProfile(data))
 };
 
-export const getStatusThunk = (id) => {
-  return (dispatch) => {
-    api.getStatus(id)
-      .then(response => {
-        dispatch(setStatus(response.data))
-      })
-  }
+export const getStatusThunk = (id) => async (dispatch) => {
+  const { data: { data } } = await api.getStatus(id);
+  dispatch(setStatus(data))
 };
 
-export const updateStatusThunk = (status) => {
-  return (dispatch) => {
-    api.updateStatus(status)
-      .then(response => {
-        if(response.data.resultCode === 0) {
-          dispatch(setStatus(status))
-        }
-      })
+export const updateStatusThunk = (status) => async (dispatch) => {
+  const { data: { data } } = await api.updateStatus(status);
+  if (data.resultCode === 0) {
+    dispatch(setStatus(status))
   }
 };
 

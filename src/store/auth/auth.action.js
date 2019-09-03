@@ -20,30 +20,21 @@ export const setAuthDataThunk = () => async (dispatch) => {
   console.log(data)
 };
 
-export const loginThunk = (email, password, rememberMe) => {
-  return (dispatch) => {
-    api.login(email, password, rememberMe)
-       .then(response => {
-         if (response.data.resultCode === 0) {
-           dispatch(setAuthDataThunk())
-         } else {
-           let messages = response.data.messages.length > 0 ? response.data.messages[0] : 'some error';
-           dispatch(stopSubmit('login', {
-             _error: messages
-           }))
-         }
-       })
+export const  loginThunk = (email, password, rememberMe) => async(dispatch) => {
+  const { data: {data} } = await api.login(email, password, rememberMe);
+  if (data.resultCode === 0) {
+    dispatch(setAuthDataThunk())
+  } else {
+    let messages = data.messages.length > 0 ? data.messages[0] : 'some error';
+    dispatch(stopSubmit('login', {
+      _error: messages
+    }))
   }
 };
 
-export const logOutThunk = () => {
-  return (dispatch) => {
-    api.LogOut()
-       .then(response => {
-         if (response.data.resultCode === 0) {
+export const logOutThunk = () => async(dispatch) => {
+    const {data: {data}} = await api.LogOut();
+         if (data.resultCode === 0) {
            dispatch(setAuthData(null, null, null, false))
          }
-       })
-  }
 };
-
