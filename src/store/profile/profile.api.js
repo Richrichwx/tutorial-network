@@ -1,13 +1,13 @@
 import http from '../../core/http';
 
 const api = {
-  getProfile: async(id) => {
+  getProfile: async (id) => {
     return await http.get(`profile/` + id)
   },
-  getStatus: async(id) => {
+  getStatus: async (id) => {
     return  await http.get(`profile/status/` + id)
   },
-  updateStatus: async(status) => {
+  updateStatus: async (status) => {
     return await http.put(`profile/status`, {
       status: status
     })

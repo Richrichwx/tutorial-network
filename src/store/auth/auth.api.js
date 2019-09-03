@@ -1,15 +1,15 @@
 import http from '../../core/http';
 
 const api = {
-  getAuth: async() => {
+  getAuth: async () => {
     return await http.get(`auth/me`)
   },
-  login: async(email, password, rememberMe = false) => {
+  login: async (email, password, rememberMe = false) => {
     return  await http.post(`auth/login`, {
       email, password, rememberMe
     })
   },
-  LogOut: async() => {
+  LogOut: async () => {
     return  await http.delete(`auth/login`)
   }
 };
