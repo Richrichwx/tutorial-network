@@ -14,10 +14,6 @@ const HeaderContainer = styled.div`
 class Header extends React.Component {
 
 
-  navigateTo = (e, path) => {
-    e.preventDefault();
-    window.navigate.push(`/${path}`)
-  };
   logOutButton = () => {
     this.props.logOutThunk()
   };
@@ -30,7 +26,7 @@ class Header extends React.Component {
             <button onClick={this.logOutButton}>Logout</button>
           </div>
           :
-          <a href="/login" onClick={(e) => this.navigateTo(e, `login`)}>
+          <a href="/login" >
             Login
           </a>
         }

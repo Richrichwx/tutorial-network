@@ -6,6 +6,7 @@ import avatar from '../../assets/image.jpeg';
 
 import { compose } from 'redux';
 import ProfileStatus from '../ProfileStatus';
+import { WithAuthRedirect } from '../../hoc/AuthRedirectWrapper';
 
 const Avatar = styled.img`
   width: 150px;
@@ -83,5 +84,6 @@ const mapDispatchToProps = {
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
+  WithAuthRedirect
 )(ProfileInfo);
 
