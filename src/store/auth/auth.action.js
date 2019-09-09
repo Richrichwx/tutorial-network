@@ -17,7 +17,6 @@ export const setAuthDataThunk = () => async (dispatch) => {
     let { id, email, login } = data.data;
     dispatch(setAuthData(id, email, login, true))
   }
-  console.log(data)
 };
 
 export const loginThunk = (email, password, rememberMe) => async (dispatch) => {
